@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% load crispy_forms_tags %}
+<!--- Contact form page --->
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">       
+        <!-- Information Column -->
+        <div class="col-md-4">
+            <div class="info-box">
+                <h1>Let's connect</h1>
+                <p>This form allows you to contact us directly. Please fill out all required fields and submit your query.</p>
+                <ul>
+                    <li>Ensure your email is valid.</li>
+                    <li>Provide detailed information in the message field.</li>
+                    <li>We will respond within 2 working business days.</li>
+                </ul>
+                <p>We’re also on a few social networks, so check us out</p>
+            </div>
+        </div>
+        <!-- Form Column -->
+        <div class="col-md-8">
+            <form method="POST" action="{% url 'contact' %}" class="container">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

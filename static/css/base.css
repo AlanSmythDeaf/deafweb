@@ -31,7 +31,7 @@ color: yellow;
     margin-right: 15px;
 }
 
-/* Index Container */
+/* Home Page */
 
 .container-fluid {
     padding: 50px 0; /* Adds vertical space inside each container */
@@ -91,4 +91,11 @@ color: yellow;
 .btn-wide:hover {
     background-color: #274c77; /* Keeps the same color on hover */
     color: #fff; /* Keeps the same text color on hover */
+}
+
+/* Contact Page */
+
+.btn-submit {
+    background-color: #274c77;
+    color: white;
 }

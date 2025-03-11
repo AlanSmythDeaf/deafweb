@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+  <!-- <img src="{% static 'images/sorry.webp' %}" alt="Sorry Irish Sign Language Image" class="img-fluid"> -->
+</div>
+<div class="container mt-5">
+    <div class="row">
+      <h2 class="text-center">Oops 404 error! The page you were looking for doesn't exist</h2>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'home' %}" class="btn btn-submit">Back to Home</a>
+        <a href="{% url 'contact' %}" class="btn btn-submit">Contact Page</a>
+    </div>
+</div>
+{% endblock content %}
