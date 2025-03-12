@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8e_@rzx8p#-vpg2#s*f%opr2o!%kx8(&u7k%!t%&0gjh%3byue'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-alansmythdeaf-deafweb-x0o5rl5dx2u.ws-eu118.gitpod.io']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'home',
     'contact',
+    'about',
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = 'bootstrap5'

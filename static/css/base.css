@@ -99,3 +99,22 @@ color: yellow;
     background-color: #274c77;
     color: white;
 }
+
+/* About Page */
+.top-section {
+    background-color: #f8f9fa;
+}
+
+.mid-section {
+    background-color: #e6e8eb;
+}
+
+.bottom-section {
+    background-color: #e6e8eb;
+}
+
+.text-center p {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 0 auto;   /* Centers the paragraph horizontally */
+    text-align: justify; /* Optional: Justifies the text for a cleaner look */
+  }
