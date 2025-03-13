@@ -9,7 +9,6 @@ body {
     color: #4A4A4F;
 }
 
-
 .navbar {
     background-color: #274c77 ;
 }
@@ -118,3 +117,4 @@ color: yellow;
     margin: 0 auto;   /* Centers the paragraph horizontally */
     text-align: justify; /* Optional: Justifies the text for a cleaner look */
   }
+
