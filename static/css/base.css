@@ -127,3 +127,57 @@ color: yellow;
     margin: 0 auto;   /* Centers the paragraph horizontally */
     text-align: justify; /* Optional: Justifies the text for a cleaner look */
   }
+
+/* Collaborate */
+.ul-fee {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/* Make the background transparent for the toggle icon */
+/* Make the background transparent for the toggle icon */
+/* Make the background transparent for the toggle icon */
+.navbar-toggler-icon {
+    position: relative;
+    width: 30px; /* Set width */
+    height: 24px; /* Adjust height to fit three lines */
+    background-color: transparent !important; /* Transparent background */
+}
+
+/* Top line */
+.navbar-toggler-icon::before {
+    content: "";
+    position: absolute;
+    top: 0; /* Position at the top */
+    left: 0;
+    width: 100%; /* Full width of the icon */
+    height: 3px; /* Line thickness */
+    background-color: #ccc; /* Light gray color */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Middle line */
+.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 0;
+    width: 100%; /* Full width of the icon */
+    height: 3px; /* Line thickness */
+    background-color: #ccc; /* Light gray color */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Bottom line (additional element) */
+.navbar-toggler-icon span {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    width: 100%; /* Full width of the icon */
+    height: 3px; /* Line thickness */
+    background-color: #ccc; /* Light gray color */
+}
+
