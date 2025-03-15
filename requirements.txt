@@ -1,6 +1,9 @@
 asgiref==3.8.1
-Django==3.2.25
+crispy-bootstrap5==2024.10
+Django==5.1.7
 django-allauth==0.50.0
+django-crispy-forms==2.3
+django-summernote==0.8.20.0
 oauthlib==3.2.2
 PyJWT==2.10.1
 python3-openid==3.2.0
