@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid first-section">
+    <div class="text-center">
+        <h1>Our Website Portfolio</h1>
+        <h5>Explore our diverse range of website designs across various industries</h5>
+    </div>
+    <div class="category-dropdown text-center">
+        <select id="category-select">
+            <option value="all">All Categories</option>
+            <option value="charity">Charity</option>
+            <option value="retail">Retail</option>
+            <option value="Service">Services</option>
+        </select>
+    </div>
+</div>
+
+<div class="container-fluid portfolio-section">
+    <div class="row" id="portfolio-items">
+        {% for website in websites %}
+        <div class="col-md-4 portfolio-item" data-category="{{ website.category }}">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ website.name }}</h5>
+                    <p class="card-text">{{ website.description }}</p>
+                    <a href="{{ website.url }}" class="btn btn-primary" target="_blank">Visit Site</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container-fluid cta-section">
+    <div class="text-center p">
+        <h1>Ready to Create Your Dream Website?</h1>
+        <h5>Let's bring your vision to life with our expert web design services.</h5>
+        <a href="{% url 'collaborate' %}" class="btn btn-lg btn-primary">Get Started</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/portfolio-filter.js' %}"></script>
+{% endblock %}

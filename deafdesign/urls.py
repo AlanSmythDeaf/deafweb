@@ -22,6 +22,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('about/', include('about.urls')),
     path('collaborate/', include('collaborate.urls')),
+    path('work', include('work.urls')),
 ]
 
 handler404 = "deafdesign.views.handler404"
