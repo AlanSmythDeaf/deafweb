@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Successful Email -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Thank You for Subscribing!</h2>
+            <p>You have successfully subscribed to our newsletter. We look forward to sharing exciting updates with you!</p>
+            <a href="{% url 'home' %}" class="btn btn-primary">Return to Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

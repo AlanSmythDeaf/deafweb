@@ -13,8 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,7 +25,8 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('about/', include('about.urls')),
     path('collaborate/', include('collaborate.urls')),
-    path('work', include('work.urls')),
+    path('work/', include('work.urls')),
+    path('subscribe/', views.subscribe_newsletter, name='subscribe_newsletter'),
 ]
 
 handler404 = "deafdesign.views.handler404"
