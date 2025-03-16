@@ -97,6 +97,13 @@ SITE_ID = 1
 
 WSGI_APPLICATION = 'deafdesign.wsgi.application'
 
+SUMMERNOTE_CONFIG = {
+    'iframe': True,
+    'summernote': {
+        'width': '100%',
+        'height': '480',
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
