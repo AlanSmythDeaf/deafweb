@@ -155,6 +155,11 @@ color: yellow;
     padding-top: 15px;
 }
 
+.portfolio-section .card-title {
+    text-align: center; /* Centers the title */
+    margin-bottom: 15px; /* Adds some spacing below the title */
+}
+
 .portfolio-section .card {
     margin-bottom: 20px;
 }

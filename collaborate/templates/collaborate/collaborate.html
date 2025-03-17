@@ -9,12 +9,16 @@
 {% block content %}
 <div class="container-fluid first-section">
     <!-- first-section -->
-    <div class="text-center">
-        <h2>Our Collaboration Process</h2>
-        <h5>We've designed our collaboration process to be smooth and 
-        efficient. Here's the process
-        </h5>
-    </div>
+    <section id="payment" class="mb-5">
+        <div class="text-center">
+            <h2>Our Collaboration Process</h2>
+            <h5>We've designed our collaboration process to be smooth and efficient.</h5>
+            <h5>Read Below on how we work.</h5>
+            <div id="checkout-button-container">
+                <a href="{% url 'checkout' %}" id="checkout-button" class="btn btn-submit">Payment Form</a>
+            </div>
+        </div>
+    </section>
 </div>
 
 <div class="container-fluid why-choose-us">
@@ -80,7 +84,7 @@
     <section id="payment" class="mb-5">
         <h2>Ready to Start Consultation?</h2>
         <div id="checkout-button-container">
-            <a href="{% url 'checkout' %}" id="checkout-button" class="btn btn-submit">Pay Now</a>
+            <a href="{% url 'checkout' %}" id="checkout-button" class="btn btn-submit">Payment Form</a>
         </div>
     </section>
 </div>
