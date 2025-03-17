@@ -10,55 +10,68 @@
 <div class="container-fluid first-section">
     <!-- first-section -->
     <div class="text-center">
-        <h1>Our Collaboration Process</h1>
+        <h2>Our Collaboration Process</h2>
         <h5>We've designed our collaboration process to be smooth and 
         efficient. Here's the process
         </h5>
     </div>
 </div>
 
-<div class="container-fluid second-section">
-    <!-- second-section -->
+<div class="container-fluid why-choose-us">
+    <!-- Collaboration Process Section -->
     <div class="text-center">
-        <div class="row buttons">
-            <div class="col-md-3 mb-4">
-                <div class="btn btn-wide h-100">
-                    <h5>Initial Consultation</h5>
-                    <p>Submit a €50 consultation fee for a three-hour session. This fee is fully refundable if you choose not to proceed after the consultation.</p>
-                </div>
+        <h2>Our Collaboration Process</h2>
+        <div class="buttons">
+            <div class="btn btn-wide">
+                <h5>Initial Consultation</h5>
+                <p>Submit a €50 consultation fee for a three-hour session. This fee is fully refundable if you choose not to proceed after the consultation.</p>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="btn btn-wide h-100">
-                    <h5>Project Review</h5>
-                    <p>We'll review your requirements, discuss your vision, and provide a clear quote during our scheduled consultation.</p>
-                </div>
+            <div class="btn btn-wide">
+                <h5>Project Review</h5>
+                <p>We'll review your requirements, discuss your vision, and provide a clear quote during our scheduled consultation.</p>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="btn btn-wide h-100">
-                    <h5>Project Planning</h5>
-                    <p>We'll outline the project timeline, payment process, and our system for regular updates and feedback.</p>
-                </div>
+            <div class="btn btn-wide">
+                <h5>Project Planning</h5>
+                <p>We'll outline the project timeline, payment process, and our system for regular updates and feedback.</p>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="btn btn-wide h-100">
-                    <h5>Moving Forward</h5>
-                    <p>If you decide to proceed after the consultation, we'll securely process the payment and begin work on your project.</p>
-                </div>
+            <div class="btn btn-wide">
+                <h5>Moving Forward</h5>
+                <p>If you decide to proceed after the consultation, we'll securely process the payment and begin work on your project.</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid first-section">
-    <!-- first-section -->
-    <div class="text-center">
-        <h1>Why We Charge a Consultation Fee</h1>
-        <ul class="ul-fee">
-            <li>Helps us prioritize serious inquiries</li>
-            <li>Prevents wasted time for both parties</li>
-            <li>Sets the stage for a successful collaboration</li>
-        </ul>
-        <h5>Our approach ensures we're aligned from the very beginning, helping to bring your vision to life. We look forward to connecting with you!</h5>
+<div class="container-fluid first section"> 
+    <!-- Why We Charge a Consultation Fee Section --> 
+    <div class="text-center"> 
+        <h2>Why We Charge a Consultation Fee</h2> 
+        <div class="buttons"> 
+            <div class="btn btn-wide"> 
+                <h5>Prioritize Serious Inquiries</h5> 
+                <p>Our consultation fee helps us focus on clients 
+                who are committed to their projects.
+                </p> 
+            </div> <div class="btn btn-wide"> 
+                <h5>Prevent Wasted Time</h5> 
+                <p>This approach ensures efficient use of time 
+                for both our team and potential clients.
+                </p> 
+            </div> 
+            <div class="btn btn-wide"> 
+                <h5>Set Stage for Success</h5> 
+                <p>By starting with a structured consultation, 
+                we lay the groundwork for a successful collaboration.
+                </p> 
+            </div>
+            <div class="btn btn-wide"> 
+                <h5>Our Approachs</h5> 
+                <p>Our approach ensures we're aligned from the very beginning, 
+                    helping to bring your vision to life. We look forward to 
+                    connecting with you!.
+                </p> 
+            </div>  
+        </div> 
     </div>
 </div>
 
@@ -67,9 +80,8 @@
     <section id="payment" class="mb-5">
         <h2>Ready to Start Consultation?</h2>
         <div id="checkout-button-container">
-            <a href="{% url 'checkout' %}" button id="checkout-button" class="btn btn-submit">Pay Now</button>
+            <a href="{% url 'checkout' %}" id="checkout-button" class="btn btn-submit">Pay Now</a>
         </div>
-        <div id="checkout-container" style="display: none;"></div>
     </section>
 </div>
 {% endblock %}

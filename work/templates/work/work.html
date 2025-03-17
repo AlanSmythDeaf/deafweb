@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid first-section">
+<div class="container first-section">
     <div class="text-center">
         <h1>Our Website Portfolio</h1>
         <h5>Explore our diverse range of website designs across various industries</h5>
@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<div class="container-fluid portfolio-section">
+<div class="container portfolio-section">
     <div class="row" id="portfolio-items">
         {% for website in websites %}
         <div class="col-md-4 portfolio-item" data-category="{{ website.category }}">
@@ -25,7 +25,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ website.name }}</h5>
                     <p class="card-text">{{ website.description }}</p>
-                    <a href="{{ website.url }}" class="btn btn-primary" target="_blank">Visit Site</a>
+                    <a href="{{ website.url }}" class="btn btn-primary visit-site" target="_blank">Visit Site</a>
                 </div>
             </div>
         </div>

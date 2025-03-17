@@ -28,7 +28,7 @@ def checkout(request):
             context = {
                 'form': form,
                 'stripe_public_key': settings.STRIPE_PUBLISHABLE_KEY,
-                'client_secret': 'test_secret',
+                'client_secret': intent.client_secret,
             }
             return render(request, 'checkout/checkout.html', context)
 

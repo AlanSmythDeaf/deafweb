@@ -128,10 +128,50 @@ color: yellow;
     text-align: justify; /* Optional: Justifies the text for a cleaner look */
   }
 
-/* Collaborate */
-.ul-fee {
-    list-style-type: none;
-    padding: 0;
+/* Our Work */
+/* Portfolio page specific styles */
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.portfolio-section .card {
+    margin-bottom: 20px;
+}
+
+.visit-site {
+    background-color: #274c77 !important;
+    border-color: #274c77 !important;
+}
+
+.visit-site:hover {
+    background-color: #1a3a5f !important;
+    border-color: #1a3a5f !important;
+}
+
+.cta-section {
+    background-color: #e6e8eb;
+    padding: 50px 0;
+}
+
+.cta-section .btn-primary {
+    background-color: #274c77;
+    border-color: #274c77;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #1a3a5f;
+    border-color: #1a3a5f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .portfolio-item {
+        margin-bottom: 20px;
+    }
 }
 
 

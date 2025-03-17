@@ -11,7 +11,7 @@
         user-friendly websites that help you connect with your audience and achieve your goals. 
         </h4>
         <div class="buttons">
-            <a href="{% url 'about' %}" class="btn btn-custom" role="btn">Collaborate</a>
+            <a href="{% url 'collaborate' %}" class="btn btn-custom" role="btn">Collaborate</a>
             <a href="{% url 'about' %}" class="btn btn-custom" role="btn">Learn More</a>
         </div>
     </div>
@@ -43,16 +43,8 @@
     <div class="text-center">
         <h2>Our Work</h2>
         <h4>Take a look at some of our amazing projects:</h4>
-    </div>
-    <!-- Placeholder for images -->
-    <div class="row">
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
-            <!-- <img src="{% static 'images/' %}" alt="Project 1 Image" class="img-fluid"> -->
-            <p>Eir Code</p>
-        </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
-            <!-- <img src="{% static 'images/ ' %}" alt="Project 2 Image" class="img-fluid"> -->
-            <p>Deaf Village Ireland</p>
+        <div class="buttons">
+            <a href="{% url 'work' %}" class="btn btn-custom" role="btn">Projects</a>
         </div>
     </div>
 </div>
