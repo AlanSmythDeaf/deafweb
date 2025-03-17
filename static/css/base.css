@@ -126,7 +126,17 @@ color: yellow;
     max-width: 800px; /* Adjust the width as needed */
     margin: 0 auto;   /* Centers the paragraph horizontally */
     text-align: justify; /* Optional: Justifies the text for a cleaner look */
-  }
+}
+
+.white-text {
+    color: white;
+}
+
+.accordion-button {
+    background-color: #274c77;
+
+}
+
 
 /* Our Work */
 /* Portfolio page specific styles */
@@ -136,6 +146,13 @@ color: yellow;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.portfolio-item  {
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .portfolio-section .card {
@@ -166,6 +183,7 @@ color: yellow;
     background-color: #1a3a5f;
     border-color: #1a3a5f;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
@@ -253,6 +271,21 @@ color: yellow;
 .second-section .btn-wide p {
     flex-grow: 1;
 }
+
+.plus-symbol {
+    font-size: 1.5em;
+    margin-right: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.accordion-button.collapsed .plus-symbol {
+    transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed) .plus-symbol {
+    transform: rotate(45deg);
+}
+
 
 @media (max-width: 767px) {
     .second-section .col-md-3 {
