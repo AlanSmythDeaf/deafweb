@@ -17,6 +17,7 @@ class Order(models.Model):
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    postal_code = models.CharField(max_length=20, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     item_name = models.CharField(max_length=100, null=False, blank=False)
     item_price = models.DecimalField(max_digits=10, decimal_places=2, null=False)
