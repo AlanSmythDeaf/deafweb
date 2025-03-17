@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+if os.path.isfile('env.py'):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -165,5 +167,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STRIPE_SECRET_KEY = "pk_test_51R2yqmRvdvqqzmsFSgPeUqKHuw7WdG3xNz42sSimvqqXiB6KjeF4Fst9diCqMJcoik5vkRXARfMTjwmOVdUdBkL300DKnJUxqf"
-STRIPE_PUBLISHABLE_KEY = "sk_test_51R2yqmRvdvqqzmsF3iOu6DcxFEKcR7ZMMitpoQAYKuKqZK86WkwFqXmNNxndoYi1Q6SzouNBa3AsVHpeEHuWnf2P00atYUCWBo" 
+#Stripe
+STRIPE_CURRENCY = 'euro'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
