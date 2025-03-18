@@ -1,58 +1,44 @@
+import logging
 import stripe
-from django.conf import settings
-from django.http import JsonResponse
-
-def test_stripe(request):
-    stripe.api_key = settings.STRIPE_SECRET_KEY
-
-    try:
-        # Test request to retrieve account details
-        account = stripe.Account.retrieve()
-        return JsonResponse(account)
-    except stripe.error.AuthenticationError as e:
-        return JsonResponse({'error': f"Authentication error: {str(e)}"})
-    except Exception as e:
-        return JsonResponse({'error': f"Error: {str(e)}"})
-
-import stripe
-
-from django.contrib import messages
-from django.conf import settings
 from django.shortcuts import render, redirect
-from django.urls import reverse
-from django.http import HttpResponse
+from django.conf import settings
+from django.contrib import messages
 from .forms import OrderForm
 from .models import Order
+
+print(settings.STRIPE_SECRET_KEY)
+logger = logging.getLogger(__name__)
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    # Initialize Stripe with secret key
     stripe.api_key = stripe_secret_key
 
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
             try:
-                # Create order first with form data
                 order = form.save(commit=False)
                 order.item_name = "Fixed Price Item"
                 order.item_price = 50.00
                 order.grand_total = 50.00
 
                 # Create Stripe PaymentIntent
-                stripe.api_key = stripe_secret_key
+                logger.info(f"Creating PaymentIntent for order {order.id}")
                 intent = stripe.PaymentIntent.create(
                     amount=5000,  # 50.00 EUR
                     currency='eur',
                     payment_method_types=['card'],
                     metadata={
                         'order_id': order.id,
-                        'email': order.email
+                        'email': order.email,
                     }
                 )
-                # Print the client secret to verify its format
-                print(intent.client_secret)
+
+                logger.info(f"PaymentIntent created successfully: {intent.id}")
+                print(f"Client Secret: {intent.client_secret}")
 
                 # Link Stripe payment ID to order
                 order.stripe_pid = intent.id
@@ -65,13 +51,13 @@ def checkout(request):
                 })
 
             except stripe.error.StripeError as e:
+                logger.error(f"Stripe error: {str(e)}")
                 messages.error(request, f"Payment error: {str(e)}")
                 return redirect('checkout')
-
             except Exception as e:
+                logger.error(f"Unexpected error: {str(e)}")
                 messages.error(request, f"Error processing order: {str(e)}")
                 return redirect('checkout')
-
     else:
         form = OrderForm()
 
