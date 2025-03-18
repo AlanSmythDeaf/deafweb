@@ -6,8 +6,9 @@
     https://stripe.com/docs/stripe-js
 */
 
-var stripePublicKey = $('#id_stripe_public_key').text(); // No slice needed!
-var clientSecret = $('#id_client_secret').text(); // No slice needed!
+var stripePublicKey = document.getElementById('id_stripe_public_key').textContent; // Retrieve the Stripe public key
+var clientSecret = document.getElementById('id_client_secret').textContent; // Retrieve the client secret
+
 var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {

@@ -1,4 +1,20 @@
 import stripe
+from django.conf import settings
+from django.http import JsonResponse
+
+def test_stripe(request):
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+
+    try:
+        # Test request to retrieve account details
+        account = stripe.Account.retrieve()
+        return JsonResponse(account)
+    except stripe.error.AuthenticationError as e:
+        return JsonResponse({'error': f"Authentication error: {str(e)}"})
+    except Exception as e:
+        return JsonResponse({'error': f"Error: {str(e)}"})
+
+import stripe
 
 from django.contrib import messages
 from django.conf import settings
@@ -35,6 +51,8 @@ def checkout(request):
                         'email': order.email
                     }
                 )
+                # Print the client secret to verify its format
+                print(intent.client_secret)
 
                 # Link Stripe payment ID to order
                 order.stripe_pid = intent.id
