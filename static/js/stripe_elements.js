@@ -1,80 +1,80 @@
-/*
-    Core logic/payment flow for this comes from here:
-    https://stripe.com/docs/payments/accept-a-payment
+document.addEventListener('DOMContentLoaded', function() {
+    // Your existing code here
+// At the beginning of your stripe_elements.js file
+    var stripePublicKey = JSON.parse(document.getElementById('id_stripe_public_key').textContent);
+    var clientSecret = JSON.parse(document.getElementById('id_client_secret').textContent);
 
-    CSS from here:
-    https://stripe.com/docs/stripe-js
-*/
+    // Then initialize Stripe with the public key
+    var stripe = Stripe(stripePublicKey);
 
-var stripePublicKey = document.getElementById('id_stripe_public_key').textContent; // Retrieve the Stripe public key
-var clientSecret = document.getElementById('id_client_secret').textContent; // Retrieve the client secret
-
-var stripe = Stripe(stripePublicKey);
-var elements = stripe.elements();
-var style = {
-    base: {
-        color: '#000',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-        fontSmoothing: 'antialiased',
-        fontSize: '16px',
-        '::placeholder': {
-            color: '#aab7c4'
+    
+    var stripe = Stripe(stripePublicKey);
+    var elements = stripe.elements();
+    var style = {
+        base: {
+            color: '#000',
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSmoothing: 'antialiased',
+            fontSize: '16px',
+            '::placeholder': {
+                color: '#aab7c4'
+            }
+        },
+        invalid: {
+            color: '#dc3545',
+            iconColor: '#dc3545'
         }
-    },
-    invalid: {
-        color: '#dc3545',
-        iconColor: '#dc3545'
-    }
-};
+    };
 
-// Create an instance of the card Element.
-var card = elements.create('card', { style: style });
+    // Create an instance of the card Element.
+    var card = elements.create('card', { style: style });
 
-// Add an instance of the card Element into the `card-element` div.
-card.mount('#card-element');
+    // Add an instance of the card Element into the `card-element` div.
+    card.mount('#card-element');
 
-// Handle realtime validation errors on the card element
-card.addEventListener('change', function (event) {
-    var errorDiv = document.getElementById('card-errors');
-    if (event.error) {
-        var html = `
-            <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-            </span>
-            <span>${event.error.message}</span>
-        `;
-        $(errorDiv).html(html);
-    } else {
-        errorDiv.textContent = '';
-    }
-});
-
-// Handle form submit
-var form = document.getElementById('payment-form');
-
-form.addEventListener('submit', function(ev) {
-    ev.preventDefault();
-    card.update({ 'disabled': true});
-    $('#submit-button').attr('disabled', true);
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function(result) {
-        if (result.error) {
-            var errorDiv = document.getElementById('card-errors');
+    // Handle realtime validation errors on the card element
+    card.addEventListener('change', function (event) {
+        var errorDiv = document.getElementById('card-errors');
+        if (event.error) {
             var html = `
                 <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
+                    <i class="fas fa-times"></i>
                 </span>
-                <span>${result.error.message}</span>`;
+                <span>${event.error.message}</span>
+            `;
             $(errorDiv).html(html);
-            card.update({ 'disabled': false});
-            $('#submit-button').attr('disabled', false);
         } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
-            }
+            errorDiv.textContent = '';
         }
+    });
+
+    // Handle form submit
+    var form = document.getElementById('payment-form');
+
+    form.addEventListener('submit', function(ev) {
+        ev.preventDefault();
+        card.update({ 'disabled': true});
+        $('#submit-button').attr('disabled', true);
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+            }
+        }).then(function(result) {
+            if (result.error) {
+                var errorDiv = document.getElementById('card-errors');
+                var html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                $(errorDiv).html(html);
+                card.update({ 'disabled': false});
+                $('#submit-button').attr('disabled', false);
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
+            }
+        });
     });
 });
