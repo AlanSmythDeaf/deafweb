@@ -163,3 +163,16 @@
     </section>
 </div>
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+  $(document).ready(function() {
+    if(window.location.hash === '#faq') {
+      $('html, body').animate({
+        scrollTop: $('#faq').offset().top
+      }, 1000);
+    }
+  });
+</script>
+{% endblock %}
