@@ -24,4 +24,4 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
     def __str__(self):
-        return f"Thank you {self.full_name}"
+        return f"Order {self.id} - {self.full_name}"
