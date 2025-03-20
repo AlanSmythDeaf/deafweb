@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<!-- checkout form -->
+<div class="container text-center mt-5">
+    <h1 class="mb-4">Thank You!</h1>
+    <p class="lead">Your payment has been successfully processed.</p>
+    <p>Order ID: <strong>{{ order.id }}</strong></p>
+    <p>We have sent a confirmation email to: <strong>{{ order.email }}</strong></p>
+    <p class="mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary" aria-current="page">Back to Home</a>
+        <a href="{% url 'work' %}" class="btn btn-primary" aria-current="page">Check out our work</a>
+    </p>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'js/stripe_elements.js' %}"></script>
+{% endblock %}

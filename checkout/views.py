@@ -53,11 +53,7 @@ def checkout(request):
                 order.stripe_pid = intent.id
                 order.save()
 
-                return render(request, 'checkout/payment.html', {
-                    'client_secret': client_secret,
-                    'stripe_public_key': stripe_public_key,
-                    'order': order,
-                })
+                return redirect('checkout_success', order_id=order.id)
 
             except stripe.error.StripeError as e:
                 logger.error(f"Stripe error: {str(e)}")
@@ -80,6 +76,26 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': client_secret,
         'fixed_price': 50.00,
+    }
+
+    return render(request, template, context)
+
+def checkout_success(request, order_id):
+    """
+    Handle successful checkouts
+    """
+    try:
+        # Fetch the order using the provided order_id
+        order = Order.objects.get(id=order_id)
+        messages.success(request, f"Payment completed successfully for {order.full_name}.")
+    except Order.DoesNotExist:
+        logger.error(f"Order with ID {order_id} does not exist.")
+        messages.error(request, "Order not found.")
+        return redirect('checkout')
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)

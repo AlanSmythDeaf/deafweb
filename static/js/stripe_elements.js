@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Your existing code here
+// Your existing code here
 // At the beginning of your stripe_elements.js file
     var stripePublicKey = JSON.parse(document.getElementById('id_stripe_public_key').textContent);
     var clientSecret = JSON.parse(document.getElementById('id_client_secret').textContent);
