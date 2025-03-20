@@ -164,9 +164,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STRIPE_CURRENCY = 'euro'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 print(f"STRIPE_PUBLIC_KEY: {STRIPE_PUBLIC_KEY}")
 print(f"STRIPE_SECRET_KEY: {STRIPE_SECRET_KEY}")
+
 
 # Initialize Stripe with your secret key
 stripe.api_key = STRIPE_SECRET_KEY

@@ -8,16 +8,16 @@
 
 
 {% block content %}
-<!-- checkout form -->
+<!-- Checkout Confirmation -->
 <div class="container text-center mt-5">
-    <h1 class="mb-4">Thank You!</h1>
+    <h1 class="mb-4">Thank You, {{ order.full_name }}</h1>
     <p class="lead">Your payment has been successfully processed.</p>
-    <p>Order ID: <strong>{{ order.id }}</strong></p>
-    <p>We have sent a confirmation email to: <strong>{{ order.email }}</strong></p>
-    <p class="mt-4">
+    <p>Your Order ID: <strong>{{ order.id }}</strong></p>
+    <p>A confirmation email has been sent to: <strong>{{ order.email }}</strong></p>
+    <div class="mt-4">
         <a href="{% url 'home' %}" class="btn btn-primary" aria-current="page">Back to Home</a>
-        <a href="{% url 'work' %}" class="btn btn-primary" aria-current="page">Check out our work</a>
-    </p>
+        <a href="{% url 'work' %}" class="btn btn-secondary" aria-current="page">Explore Our Work</a>
+    </div>
 </div>
 {% endblock %}
 
