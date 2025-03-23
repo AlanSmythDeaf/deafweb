@@ -129,6 +129,7 @@ DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
     'https://8000-alansmythdeaf-deafweb-x0o5rl5dx2u.ws-eu118.gitpod.io',
+    'https://ddesign-pp5-01f27d10398c.herokuapp.com',
 ]
 
 # Password validation
