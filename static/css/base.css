@@ -92,6 +92,7 @@ color: yellow;
 
 .btn-wide p {
     font-size: 14px;
+    text-align: justify;
 }
 
 .btn-wide:hover {
@@ -134,9 +135,12 @@ color: yellow;
 
 .accordion-button {
     background-color: #274c77;
-
+    color: white;
 }
 
+.accordion-item {
+    margin: 8px;
+}
 
 /* Our Work */
 /* Portfolio page specific styles */
@@ -188,6 +192,11 @@ color: yellow;
     background-color: #1a3a5f;
     border-color: #1a3a5f;
 }
+
+
+/* base - subcribe */
+
+
 
 
 /* Responsive adjustments */

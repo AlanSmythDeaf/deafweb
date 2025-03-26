@@ -17,6 +17,7 @@
     {% block corecss %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block extra_css %}
@@ -81,18 +82,34 @@
     <footer class="footer mt-auto py-3 bg-light">
       <div class="container">
         <div class="row">
+          
           <!-- Newsletter Subscription -->
           <div class="col-md-4">
-            <h5>Subscribe to Our Newsletter</h5>
-            <form action="{% url 'subscribe_newsletter' %}" method="post">
-              {% csrf_token %}
-              <div class="input-group mb-3">
-                  <input type="email" name="email" class="form-control" placeholder="Enter email" required>
-                  <button class="btn btn-outline-secondary" type="submit">Subscribe</button>
-              </div>
-          </form>
+            <form action="https://codeinstitute.us11.list-manage.com/subscribe/post?u=65ac3b176479d3af85ae56b91&id=8875414d88&f_id=009e89e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <div id="mc_embed_signup_scroll">
+                    <h5>Subscribe</h5>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address</label>
+                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                    </div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                    </div>
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        <input type="text" name="b_65ac3b176479d3af85ae56b91_8875414d88" tabindex="-1" value="">
+                    </div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                            <p style="margin: 0px auto;">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
           </div>
-          
+                   
           <!-- Information -->
           <div class="col-md-4">
             <h5>Information</h5>
@@ -113,6 +130,7 @@
               <a target="_blank" href="https://www.instagram.com/" class="text-dark me-2" aria-label="Follow us on Instagram"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
           </div>
+
         </div>
         
         <hr>
@@ -128,5 +146,29 @@
     {% block postloadjs %}
     {% endblock %}
 
+    <!-- MailChimp-->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+      (function($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0]='EMAIL';
+        ftypes[0]='email';
+        fnames[1]='FNAME';
+        ftypes[1]='text';
+        fnames[2]='LNAME';
+        ftypes[2]='text';
+        fnames[3]='ADDRESS';
+        ftypes[3]='address';
+        fnames[4]='PHONE';
+        ftypes[4]='phone';
+        fnames[5]='BIRTHDAY';
+        ftypes[5]='birthday';
+        fnames[6]='COMPANY';
+        ftypes[6]='text';
+      }(jQuery));
+      var $mcj = jQuery.noConflict(true);
+    </script>
   </body>
 </html>
+
