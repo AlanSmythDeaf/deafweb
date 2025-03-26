@@ -1,1 +1,1 @@
-web: gunicorn deafdesign.wsgi:application --timeout 120 --preload
+web: gunicorn deafdesign.wsgi:application
