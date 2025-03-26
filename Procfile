@@ -1,1 +1,1 @@
-web: gunicorn deafdesign.wsgi:application
+web: gunicorn deafdesign.wsgi:application --worker-class gevent --timeout 120 --preload
