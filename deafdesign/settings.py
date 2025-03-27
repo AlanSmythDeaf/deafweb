@@ -3,7 +3,7 @@
 import os
 import dj_database_url
 import stripe
-import env
+
 from pathlib import Path
 if os.path.isfile('env.py'):
     import env
