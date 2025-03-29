@@ -195,8 +195,16 @@ color: yellow;
 
 
 /* base - subcribe */
+#mc-embedded-subscribe {
+    background-color: #274c77;
+    border-color: #274c77;
+    color: white;
+}
 
-
+#mc-embedded-subscribe:hover {
+    background-color: #1a3a5f;
+    border-color: #1a3a5f;
+}
 
 
 /* Responsive adjustments */
