@@ -16,6 +16,17 @@ body {
     font-weight: 700;
     color: #4A4A4F;
 }
+.btn-custom {
+    background-color: #274c77; /* Sets the button background color */
+    color: #fff; /* Sets the button text color to white */
+    padding: 10px 20px; /* Increases the button size */
+    font-size: 16px; /* Optionally increases the font size */
+}
+
+.btn-custom:hover {
+    background-color: #1a2f4f; /* Darkens the button color on hover */
+    color: #fff; /* Keeps the text color white on hover */
+}
 
 .p {
     margin-left: 20px;
@@ -57,18 +68,6 @@ color: yellow;
     min-height: 300px; /* Ensures a minimum height for each container */
 }
 
-.btn-custom {
-    background-color: #274c77; /* Sets the button background color */
-    color: #fff; /* Sets the button text color to white */
-    padding: 10px 20px; /* Increases the button size */
-    font-size: 16px; /* Optionally increases the font size */
-}
-
-.btn-custom:hover {
-    background-color: #1a2f4f; /* Darkens the button color on hover */
-    color: #fff; /* Keeps the text color white on hover */
-}
-
 .grey .buttons {
     display: flex;
     justify-content: center;
@@ -95,13 +94,6 @@ color: yellow;
 .btn-wide:hover {
     background-color: #274c77; /* Keeps the same color on hover */
     color: #fff; /* Keeps the same text color on hover */
-}
-
-/* Contact Page */
-
-.btn-submit {
-    background-color: #274c77;
-    color: white;
 }
 
 /* About Page */
@@ -159,33 +151,6 @@ color: yellow;
 .visit-site:hover {
     background-color: #1a3a5f !important;
     border-color: #1a3a5f !important;
-}
-
-.cta-section {
-    padding: 50px 0;
-}
-
-.cta-section .btn-primary {
-    background-color: #274c77;
-    border-color: #274c77;
-}
-
-.cta-section .btn-primary:hover {
-    background-color: #1a3a5f;
-    border-color: #1a3a5f;
-}
-
-
-/* base - subcribe */
-#mc-embedded-subscribe {
-    background-color: #274c77;
-    border-color: #274c77;
-    color: white;
-}
-
-#mc-embedded-subscribe:hover {
-    background-color: #1a3a5f;
-    border-color: #1a3a5f;
 }
 
 

@@ -30,7 +30,7 @@
             <form method="POST" action="{% url 'contact' %}" class="container">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn btn-submit">Submit</button>
+                <button type="submit" class="btn btn-custom">Submit</button>
             </form>
         </div>
     </div>
