@@ -2,11 +2,16 @@
 {% load static %}
 
 {% block content %}
-<div class="container light-grey">
-    <div class="text-center">
+<div class="container-fluid d-flex justify-content-center align-items-center">
+    <!-- Our Work -->
+    <div class="text-center p">
         <h2>Our Website Portfolio</h2>
         <h5>Explore our diverse range of website designs across various industries</h5>
     </div>
+</div>
+
+<div>
+    <!-- Category dropdown-->
     <div class="category-dropdown text-center">
         <label for="category-select">Choose a category:</label>
         <select id="category-select">
@@ -19,6 +24,7 @@
 </div>
 
 <div class="container portfolio-section">
+    <!-- List of Category of work-->
     <div class="row" id="portfolio-items">
         {% for website in websites %}
         <div class="col-md-4 portfolio-item" data-category="{{ website.category }}">
@@ -34,9 +40,9 @@
     </div>
 </div>
 
-<div class="container-fluid cta-section grey">
+<div class="container-fluid grey d-flex justify-content-center align-items-center">
     <div class="text-center p">
-        <h2>Ready to Create Your Dream Website?</h2>
+        <h2>Ready to create your Dream Website?</h2>
         <h5>Let's bring your vision to life with our expert web design services.</h5>
         <a href="{% url 'collaborate' %}" class="btn btn-custom">Get Started</a>
     </div>

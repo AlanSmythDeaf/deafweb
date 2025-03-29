@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid light-grey">
-    <!-- first-section -->
-    <section id="payment" class="mb-5">
+<div class="container-fluid light-grey d-flex justify-content-center align-items-center">
+    <!-- Top-section -->
+    <section id="payment">
         <div class="text-center">
             <h2>Collaboration</h2>
             <h5>We've designed our collaboration process to be smooth and efficient.</h5>
@@ -19,7 +19,7 @@
     </section>
 </div>
 
-<div class="container-fluid grey">
+<div class="container-fluid grey d-flex justify-content-center align-items-center">
     <!-- Collaboration Process Section -->
     <div class="text-center">
         <h2>Collaboration Process</h2>
@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<div class="container-fluid light-grey"> 
+<div class="container-fluid light-grey d-flex justify-content-center align-items-center"> 
     <!-- Why We Charge a Consultation Fee Section --> 
     <div class="text-center"> 
         <h2>Why We Charge a Consultation Fee</h2> 
@@ -69,12 +69,14 @@
     </div>
 </div>
 
-<div class="container-fluid second-section text-center grey">
+<div class="container-fluid grey d-flex justify-content-center align-items-center">
     <!-- Payment Button and Checkout -->
-    <section id="payment" class="mb-5">
-        <h2>Ready to Start Consultation?</h2>
-        <div id="checkout-button-container">
-            <a href="{% url 'checkout' %}" id="checkout-button" class="btn btn-custom">Payment Form</a>
+    <section id="payment">
+        <div class="text-center">
+            <h2>Ready to Start Consultation?</h2>
+            <div id="checkout-button-container">
+                <a href="{% url 'checkout' %}" id="checkout-button" class="btn btn-custom">Payment Form</a>
+            </div>
         </div>
     </section>
 </div>
