@@ -136,15 +136,7 @@ body {
     border-color: #1a3a5f !important;
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .portfolio-item {
-        margin-bottom: 20px;
-    }
-}
-
-
+/* Nav Bar when smaller size */
 /* Make the background transparent for the toggle icon */
 .navbar-toggler-icon {
     position: relative;
@@ -204,8 +196,10 @@ body {
 }
 
 
+
+/* Responsive adjustments */
 @media (max-width: 767px) {
-    .second-section .col-md-3 {
-        width: 100%;
+    .portfolio-item {
+        margin-bottom: 20px;
     }
 }
