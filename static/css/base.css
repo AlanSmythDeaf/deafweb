@@ -2,11 +2,24 @@ body {
     background-color: #f8f9fa;
 }
 
+.light-grey {
+    background-color: #f8f9fa;
+}
+
+.grey {
+    background-color: #e6e8eb;
+}
+
 .brand {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
+}
+
+.p {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .navbar {
@@ -44,22 +57,6 @@ color: yellow;
     min-height: 300px; /* Ensures a minimum height for each container */
 }
 
-.brand-section {
-    background-color: #f8f9fa;
-}
-
-.why-choose-us {
-    background-color: #e6e8eb;
-}
-
-.contact-us {
-    background-color: #e6e8eb;
-}
-
-.our-work {
-    background-color: #f8f9fa;
-}
-
 .btn-custom {
     background-color: #274c77; /* Sets the button background color */
     color: #fff; /* Sets the button text color to white */
@@ -72,7 +69,7 @@ color: yellow;
     color: #fff; /* Keeps the text color white on hover */
 }
 
-.why-choose-us .buttons {
+.grey .buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -108,21 +105,7 @@ color: yellow;
 }
 
 /* About Page */
-.first-section {
-    background-color: #f8f9fa;
-}
 
-.second-section {
-    background-color: #e6e8eb;
-}
-
-.third-section {
-    background-color: #f8f9fa;
-}
-
-.fourth-section {
-    background-color: #e6e8eb;
-}
 .text-center p {
     max-width: 800px; /* Adjust the width as needed */
     margin: 0 auto;   /* Centers the paragraph horizontally */
@@ -179,7 +162,6 @@ color: yellow;
 }
 
 .cta-section {
-    background-color: #e6e8eb;
     padding: 50px 0;
 }
 
