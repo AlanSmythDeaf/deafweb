@@ -13,24 +13,25 @@ def subscribe_newsletter(request):
             # Create a new subscription
             NewsletterSubscriber.objects.create(email=email)
             messages.success(
-            request,
-            'You have successfully subscribed to our newsletter.'
+                request,
+                'You have successfully subscribed to our newsletter.'
             )
 
             # Redirect to a confirmation page after successful subscription
             return render(
-            request,
-            'newsletter/newsletter_subscribe_success.html'
+                request,
+                'newsletter/newsletter_subscribe_success.html'
             )
         else:
-        # Inform the user they are already subscribed
+            # Inform the user they are already subscribed
             messages.info(
                 request,
                 'You are already subscribed to our newsletter.'
-        )
+            )
 
     # If the request method is GET or invalid POST data, redirect to home
     return redirect('home')
+
 
 def handler404(request, exception):
     """ Error Handler 404 - Page Not Found """

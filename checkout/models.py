@@ -6,8 +6,8 @@ from django.db import models
 class Order(models.Model):
 
     STATUS_CHOICES = [
-    ('pending', 'Pending'),
-    ('completed', 'Completed'),
+      ('pending', 'Pending'),
+      ('completed', 'Completed'),
     ]
 
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -20,8 +20,10 @@ class Order(models.Model):
     postal_code = models.CharField(max_length=20, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     item_name = models.CharField(max_length=100, null=False, blank=False)
-    item_price = models.DecimalField(max_digits=10, decimal_places=2, null=False)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    item_price = models.DecimalField(max_digits=10, decimal_places=2,
+                                     null=False)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
 
     def __str__(self):
         return f"Order {self.id} - {self.full_name}"

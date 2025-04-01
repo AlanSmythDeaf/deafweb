@@ -7,10 +7,9 @@ class OrderForm(forms.ModelForm):
         model = Order
         fields = (
             'full_name', 'email', 'phone_number',
-            'street_address1', 'street_address2',  
-            'town_or_city', 'country'  
+            'street_address1', 'street_address2',
+            'town_or_city', 'country'
         )
-
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -36,4 +35,3 @@ class OrderForm(forms.ModelForm):
                 )
                 field.widget.attrs['class'] = 'form-control'
                 field.label = False
-

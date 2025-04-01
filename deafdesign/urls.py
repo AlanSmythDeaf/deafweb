@@ -27,8 +27,9 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('collaborate/', include('collaborate.urls')),
     path('work/', include('work.urls')),
-    path('subscribe/', views.subscribe_newsletter, name='subscribe_newsletter'),
-    path('checkout/', include('checkout.urls')), 
+    path('subscribe/', views.subscribe_newsletter,
+         name='subscribe_newsletter'),
+    path('checkout/', include('checkout.urls')),
 ]
 
 handler404 = "deafdesign.views.handler404"
