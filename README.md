@@ -152,9 +152,6 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 
 
 ## Tools & Technologies Used
-
-- [![Markdown Builder](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://tim.2bn.dev/markdown-builder) used to generate README and TESTING templates.
-  
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
 - [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
@@ -162,7 +159,6 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 - [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
 - [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
-- [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-grey?logo=githubpages&logoColor=222222)](https://pages.github.com) used for hosting the deployed front-end site.
 - [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
 - [![Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
@@ -173,11 +169,29 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Canva](https://img.shields.io/badge/Canva-grey?logo=canva&logoColor=00C4CC)](https://www.canva.com/p/canvawireframes) used for creating images & erd
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
+- [![Replit](https://img.shields.io/badge/Replit-Online_IDE-blue)](https://replit.com/) used for seeing how the layout will look like before designing the website.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
+- [![Perplexity](https://img.shields.io/badge/Perplexity-grey?logo=chromatic&logoColor=75A99C)](https://www.perplexity.ai/) used to help debug, troubleshoot, and explain things.
 - [![CoPilot](https://img.shields.io/badge/CoPilot-grey?logo=chromatic&logoColor=75A99C)](https://copilot.microsoft.com/) used to help debug, troubleshoot, and explain things.
 
 ## Database Design
-Later on
+Entity Relationship Diagrams (ERD) help to visualise database architecture before creating models.
+I have used pygraphviz and django-extensions to auto-generate an ERD.
+
+The steps taken were as follows:
+
+- In the terminal: sudo apt update
+- then: sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config
+- then type Y to proceed
+- then: pip3 install django-extensions pygraphviz
+- in my settings.py file, I added the following to my INSTALLED_APPS
+  
+- 'django_extensions'
+  
+- back in the terminal: python3 manage.py graph_models -a -o erd.png
+- dragged the new erd.png file into my documentation/ folder
+- removed 'django_extensions', from my INSTALLED_APPS
+- finally, in the terminal: pip3 uninstall django-extensions pygraphviz -y
 
 ## Agile Development Process
 how to explain ????????
@@ -197,16 +211,22 @@ screenshot of Open and Closed Issues.
 ### MoSCOw
 It's a method that prioritzation technique used in management, The acronym MoSCoW represents four categories of initiatives: must-have, should-have, could-have, and won't-have, or will not have right now. I use Must-have and should-have for planning the website. The most important is using should which I should use.
 
+### Ecommerce Business Model
+
+### Search Engine Optimization (SEO) & Social Media Marketing
+### Keywords
+### Sitemap
+### Robtos
 ## Social Media
 ### Facebook
 Create a MockUp Facebook
 Having a social media presence is essential for e-commerce businesses because it significantly expands their reach and enhances customer engagement beyond what a standalone website can achieve. Social media platforms like Facebook, Instagram, and TikTok boast billions of active users. Unlike websites, which rely on users actively seeking them out, social media allows businesses to meet potential customers where they already spend their time, increasing visibility and brand recognition.
-
 I've set up a Facebook business account to establish a presence for my e-commerce brand. This account will serve as a platform to connect with potential customers, showcase products, share updates, and build engagement.
-
-
-
+|Payment | Payment completed|  
+| --- | --- | 
+| ![screenshot](documentation/socialmedia/Facebook Page Mockup 2022.png) | ![screenshot](documentation/browsers/chrome-payment-thank.png) |
 ### Newsletter
+
 
 ## Testing
 > [!NOTE]  
