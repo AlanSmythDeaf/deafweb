@@ -216,21 +216,29 @@ It's a method that prioritzation technique used in management, The acronym MoSCo
 ### Search Engine Optimization (SEO) & Social Media Marketing
 ### Keywords
 ### Sitemap
-### Robtos
+I've used XML-Sitemaps to generate a sitemap.xml file. This was generated using my deployed site URL: https://signcoding-d529cc1ebf99.herokuapp.com
+
+After crawling the entire site, it created a sitemap.xml, which I've downloaded and included in the repository.
+
+### Robots
+
 ## Social Media
 ### Facebook
 Create a MockUp Facebook
 Having a social media presence is essential for e-commerce businesses because it significantly expands their reach and enhances customer engagement beyond what a standalone website can achieve. Social media platforms like Facebook, Instagram, and TikTok boast billions of active users. Unlike websites, which rely on users actively seeking them out, social media allows businesses to meet potential customers where they already spend their time, increasing visibility and brand recognition.
 I've set up a Facebook business account to establish a presence for my e-commerce brand. This account will serve as a platform to connect with potential customers, showcase products, share updates, and build engagement.
-|Payment | Payment completed|  
+|Facebook Page | Facebook Post |  
 | --- | --- | 
-| ![screenshot](documentation/socialmedia/Facebook Page Mockup 2022.png) | ![screenshot](documentation/browsers/chrome-payment-thank.png) |
+| ![screenshot](documentation/socialmedia/fb-mockup.png) | ![screenshot](documentation/socialmedia/fb-post.png) |
 ### Newsletter
-
+To recieved the newsletter, the user will need to subscribe to the newsletter by entering an email adress. This is located at the bottom of the page. At first I used Django and then change it to using the MailChimp newsletter
+|Subscribe | When the user enter email address |  
+| --- | --- | 
+| ![screenshot](documentation/features/subscribe_bottompage.png) | ![screenshot](documentation/browsers/chrome-subscribe.png) |
 
 ## Testing
 > [!NOTE]  
-> For all testing, please refer to the [TESTING.md](TESTING.md) file. (not yet)
+> For all testing, please refer to the [TESTING.md](TESTING.MD) file. (not yet)
 
 ## Deployment
 
@@ -252,13 +260,36 @@ To obtain my own Postgres Database from Code Institute, I followed these steps:
 > - Code Institute students are allowed a maximum of 8 databases.
 > - Databases are subject to deletion after 18 months.
 
-### Cloudinary API
-Have it but not yet use it
-
 ### Stripe
-Not Yet
+This project uses Stripe to handle the ecommerce payments.
+
+Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
+
+- From your Stripe dashboard, click to expand the "Get your test API keys".
+- You'll have two keys here:
+  - STRIPE_PUBLIC_KEY = Publishable Key (starts with pk)
+  - STRIPE_SECRET_KEY = Secret Key (starts with sk)
+
 ### Gmail
-Not yet
+This project uses Gmail to handle sending emails to users for account verification and purchase order confirmations.
+
+Once you've created a Gmail (Google) account and logged-in, follow these series of steps to get your project connected.
+
+- Click on the Account Settings (cog icon) in the top-right corner of Gmail.
+- Click on the Accounts and Import tab.
+- Within the section called "Change account settings", click on the link for Other Google Account settings.
+- From this new page, select Security on the left.
+- Select 2-Step Verification to turn it on. (verify your password and account)
+- Once verified, select Turn On for 2FA.
+- Navigate back to the Security page, and you'll see a new option called App passwords.
+- This might prompt you once again to confirm your password and account.
+- Select Mail for the app type.
+- Select Other (Custom name) for the device type.
+  - Any custom name, such as "Django" or KicksOnFire
+- You'll be provided with a 16-character password (API key).
+  - Save this somewhere locally, as you cannot access this key again later!
+  - EMAIL_HOST_PASS = user's 16-character API key
+  - EMAIL_HOST_USER = user's own personal Gmail email address
 
 ### Heroku Deployment
 
@@ -277,7 +308,11 @@ Deployment steps are as follows, after account setup:
 | --- | --- |
 | `DATABASE_URL` | user's own value |
 | `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `EMAIL_HOST_PASS` | user's own value |
+| `EMAIL_HOST_USER` | user's own value |
 | `SECRET_KEY` | user's own value |
+| `STRIPE_PUBLIC_KEY` | user's own value |
+| `STRIPE_SECRET_KEY` | user's own value |
 
 Heroku needs three additional files in order to deploy properly.
 
@@ -337,9 +372,13 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("CLOUDINARY_URL", "user's own value")
 os.environ.setdefault("DATABASE_URL", "user's own value")
 os.environ.setdefault("SECRET_KEY", "user's own value")
+os.environ.setdefault("EMAIL_HOST_PASS", "user's own value")
+os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
+os.environ.setdefault("SECRET_KEY", "user's own value")
+os.environ.setdefault("STRIPE_PUBLIC_KEY", "user's own value")
+os.environ.setdefault("STRIPE_SECRET_KEY", "user's own value")
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")
@@ -410,7 +449,7 @@ There was no difference between local and deployment noticed
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Canva](https://www.canva.com) | entire site | image | Post image |
+| [Canva](https://www.canva.com) | entire site | image | logo |
 
 
 ### Acknowledgements
