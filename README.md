@@ -222,11 +222,14 @@ It's a method that prioritzation technique used in management, The acronym MoSCo
 Create a MockUp Facebook
 Having a social media presence is essential for e-commerce businesses because it significantly expands their reach and enhances customer engagement beyond what a standalone website can achieve. Social media platforms like Facebook, Instagram, and TikTok boast billions of active users. Unlike websites, which rely on users actively seeking them out, social media allows businesses to meet potential customers where they already spend their time, increasing visibility and brand recognition.
 I've set up a Facebook business account to establish a presence for my e-commerce brand. This account will serve as a platform to connect with potential customers, showcase products, share updates, and build engagement.
-|Payment | Payment completed|  
+|Facebook Page | Facebook Post |  
 | --- | --- | 
-| ![screenshot](documentation/socialmedia/Facebook Page Mockup 2022.png) | ![screenshot](documentation/browsers/chrome-payment-thank.png) |
+| ![screenshot](documentation/socialmedia/fb-mockup.png) | ![screenshot](documentation/socialmedia/fb-post.png) |
 ### Newsletter
-
+To recieved the newsletter, the user will need to subscribe to the newsletter by entering an email adress. This is located at the bottom of the page. At first I used Django and then change it to using the MailChimp newsletter
+|Subscribe | When the user enter email address |  
+| --- | --- | 
+| ![screenshot](documentation/features/subscribe_bottompage.png) | ![screenshot](documentation/browsers/chrome-subscribe.png) |
 
 ## Testing
 > [!NOTE]  
