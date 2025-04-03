@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:  
+Sitemap: https://ddesign-pp5-01f27d10398c.herokuapp.com/sitemap.xml
