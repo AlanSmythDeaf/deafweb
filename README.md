@@ -233,7 +233,7 @@ To recieved the newsletter, the user will need to subscribe to the newsletter by
 
 ## Testing
 > [!NOTE]  
-> For all testing, please refer to the [TESTING.md](TESTING.md) file. (not yet)
+> For all testing, please refer to the [TESTING.md](TESTING.MD) file. (not yet)
 
 ## Deployment
 
