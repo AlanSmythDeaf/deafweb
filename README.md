@@ -5,8 +5,8 @@ Deaf Design is a web design company: Founded and operated by Deaf professionals,
 
 The goal was to have a website on basis that I hopefully will become a web dev.
 
-![screenshot](documentation/others/) ---> not yet
-source: [amiresponsive](https://ui.dev/amiresponsive) ---> not yet
+![screenshot](documentation/other/amiresponsive.png) 
+source: [amiresponsive](https://ui.dev/amiresponsive)
 
 ## UX
 When decide on the Project 5 - I was thinking about how to do ecommerce that is not the same as  boutiuq ado, want to see if I can do it slightly different so went webdesign business. 
@@ -15,6 +15,7 @@ When decide on the Project 5 - I was thinking about how to do ecommerce that is 
  - Using the User Story, Wireframe, Kaban that helps build the website.
 
 ### Structure
+Scope Plane - 
 
 ### Colour Scheme 
 I have chose the color blue as the main colour
@@ -32,6 +33,13 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 | #FFFFFF | Font in the button and header |
 | #000 | Main Font in the body and footer section  |
 
+| Coolor Text and background | Coolor Text and background | 
+| --- | --- | 
+| ![screenshot](documentation/coolor/coolor1.png) | ![screenshot](documentation/coolor/coolor2.png) | 
+| ![screenshot](documentation/coolor/coolor3.png) | ![screenshot](documentation/coolor/coolor4.png) |
+| ![screenshot](documentation/coolor/coolor5.png) |  |  
+
+
 ## User Stories
 
 ### New Site Users
@@ -43,27 +51,36 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 - As a new site user, I would like to be able to see what kind of works they do and does it works
 
 ### Returning Site Users
-
-
 - As a returning site user, I would like to see the updates that they created a website.
 
 ### Site Admin
 
-- As a site administrator, I should be able to log in, so that I can access the admin page.
+- As a site administrator, I should be able to log into the admin page.
 - As a site administrator, I should be able to update the works section.
 - As a site administrator, I should be able to manage the contact us, so that I can received message.
 
 ## Wireframes
 - As I design the wireframe from the start, It slightly change over time as decided to keep it simple and get the code working.
 
-### Mobile Wireframes
-| ![screenshot](documentation/wireframe/mobile_view.png)
-
-### Tablet Wireframes
-| ![screenshot](documentation/wireframe/tablet_viewing.png)
-
 ### Desktop Wireframes
-| ![screenshot](documentation/wireframe/website_viewing.png)
+| Home| Collaboration | About | 
+| --- | --- | --- | 
+| ![screenshot](documentation/wireframes/wf-desktop-home.png) |  ![screenshot](documentation/wireframes/wf-desktop-collaborate.png) | ![screenshot](documentation/wireframes/wf-desktop-about.png) |
+
+| work| contact | Payment |
+| --- | --- | --- | 
+| ![screenshot](documentation/wireframes/wf-desktop-category.png) |  ![screenshot](documentation/wireframes/wf-desktop-contact.png) | ![screenshot](documentation/wireframes/wf-desktop-payment.png) |
+
+
+### Mobile Wireframes
+| Home| Collaboration | About | 
+| --- | --- | --- | 
+| ![screenshot](documentation/wireframes/wf-phone-home.png) |  ![screenshot](documentation/wireframes/wf-phone-collaborate.png) | ![screenshot](documentation/wireframes/wf-phone-about.png) |
+
+| work| contact | Payment |
+| --- | --- | --- | 
+| ![screenshot](documentation/wireframes/wf-phone-category.png) |  ![screenshot](documentation/wireframes/wf-phone-contact.png) | ![screenshot](documentation/wireframes/wf-phone-payment.png) |
+
 
 ### Existing Features
 - **Home**
@@ -76,69 +93,65 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
     5) Logo - back to the home page
     6) Section divided as scroll down with two different colour
 
-| Start|  |  
-| --- | --- | 
-| ![screenshot](documentation/browser/chrome_home.png) |  ![screenshot](documentation/features/home_end.png) |
+| Home| 
+| --- | 
+| ![screenshot](documentation/features/homepage.png) |
 
 - **About**
 
-    - About page, this is learning how Deaf Design came about and history & Mission - Also has a FAQ.
+    - About page, this is learning how Deaf Design came about and history & mission, when you scroll down it has FAQ.
 
-| Start | End |  
-| --- | --- | 
-| ![screenshot](documentation/browser/chrome_about.png) | ![screenshot](documentation/features/about_end.png) |
+| About | Faq  |
+| --- | --- |
+| ![screenshot](documentation/features/aboutpage.png) | ![screenshot](documentation/features/faq.png) 
 
 - **Contact**
 
     - Contact page, this is when a user want to get in touch with the admin. The user must type in Name, Email Address and Message to be able to submit a message 
     
-| Start | End |  
+| Contact | Thank you message |  
 | --- | --- | 
-| ![screenshot](documentation/browser/chrome_contact.png) | ![screenshot](documentation/defensive/contact_entermessage.png) |
+| ![screenshot](documentation/browsers/chrome-contat.png) | ![screenshot](documentation/browsers/chrome-contact-thank.png) |
 
 - **Our Work**
 
     - Work page, this is where Deaf Design has created a website for other companies, It has categories and click on different website page that will bring you to other website.
     
-| Start | End |  
-| --- | --- | 
-| ![screenshot](documentation/browser/chrome_login.png) | ![screenshot](documentation/defensive/login_password.png) |
+| Work | Charity | retail | service | 
+| --- | --- |  --- | --- | 
+| ![screenshot](documentation/browsers/chrome-work.png) | ![screenshot](documentation/features/workcategory_charity.png) | ![screenshot](documentation/features/workcategory_retail.png) | ![screenshot](documentation/features/workcategory_service.png) |
 
 - **Collaborate**
 
     - Collaborate page, this is where and how the process work if the user wants to work with Deaf Design also has a payment form that brings to checkout
     
-| Start | End |  
-| --- | --- | 
-| ![screenshot](documentation/browser/chrome_register.png) | ![screenshot](documentation/defensive/register_usernamealreadyexist.png) |
+| Collaborate |   
+| --- |
+| ![screenshot](documentation/features/collabratepage.png) |
 
 - **Payment**
 
-    - Payment page / Check out page, It has credit details and form for user to log in information to make payment.
+    - Payment page / Check out page, It has credit details and form for user to log in the deatails to make payment.
     
-| Start | End |  
+|Payment | Payment completed|  
 | --- | --- | 
-| ![screenshot](documentation/browser/chrome_post.png) | ![screenshot](documentation/defensive/post_comment.png) |
+| ![screenshot](documentation/browsers/chrome-payment.png) | ![screenshot](documentation/browsers/chrome-payment-thank.png) |
 
-### Scope Plane
-For the PP5 project, 
+- **Others**
+    
+|Subscribe | Policy Page | Django Admin | 404page |
+| --- | --- | --- | --- |
+| This is at the bottom of the page, where user can subscribe to newsletter | Policy Page is external page that goes to termsfeed | admin page for the Owner to update and check | a page that doesnt exist, can be a typo |
+| ![screenshot](documentation/features/subscribe_bottompage.png) | ![screenshot](documentation/features/policypage.png) | ![screenshot](documentation/features/djangopage.png) | ![screenshot](documentation/features/404page.png) |
 
-## Key Features Implemented
-- Django All Auth
-- Stripe
-- Responsive Design
-- Transparency
 
 ### Future Features
-- People/User to upload video on the contact us page so people can sign in their own sign language and also in the comment people can upload the video
-- In work pagem each section to have full width of mockup on each device i.e. laptop, tablet of companies we work with.
-- 
+- People/User to upload video on the contact us page so people can sign in their own sign language.
+- In work page each section to have full width of mockup on each device i.e. laptop, tablet of companies we work with.
+  
 
 
 ## Tools & Technologies Used
-
-- [![Markdown Builder](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://tim.2bn.dev/markdown-builder) used to generate README and TESTING templates.
-  
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
 - [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
@@ -146,7 +159,6 @@ For the PP5 project,
 - [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
 - [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
-- [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-grey?logo=githubpages&logoColor=222222)](https://pages.github.com) used for hosting the deployed front-end site.
 - [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
 - [![Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
@@ -157,11 +169,29 @@ For the PP5 project,
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Canva](https://img.shields.io/badge/Canva-grey?logo=canva&logoColor=00C4CC)](https://www.canva.com/p/canvawireframes) used for creating images & erd
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
+- [![Replit](https://img.shields.io/badge/Replit-Online_IDE-blue)](https://replit.com/) used for seeing how the layout will look like before designing the website.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
+- [![Perplexity](https://img.shields.io/badge/Perplexity-grey?logo=chromatic&logoColor=75A99C)](https://www.perplexity.ai/) used to help debug, troubleshoot, and explain things.
 - [![CoPilot](https://img.shields.io/badge/CoPilot-grey?logo=chromatic&logoColor=75A99C)](https://copilot.microsoft.com/) used to help debug, troubleshoot, and explain things.
 
 ## Database Design
-Later on
+Entity Relationship Diagrams (ERD) help to visualise database architecture before creating models.
+I have used pygraphviz and django-extensions to auto-generate an ERD.
+
+The steps taken were as follows:
+
+- In the terminal: sudo apt update
+- then: sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config
+- then type Y to proceed
+- then: pip3 install django-extensions pygraphviz
+- in my settings.py file, I added the following to my INSTALLED_APPS
+  
+- 'django_extensions'
+  
+- back in the terminal: python3 manage.py graph_models -a -o erd.png
+- dragged the new erd.png file into my documentation/ folder
+- removed 'django_extensions', from my INSTALLED_APPS
+- finally, in the terminal: pip3 uninstall django-extensions pygraphviz -y
 
 ## Agile Development Process
 how to explain ????????
@@ -181,16 +211,22 @@ screenshot of Open and Closed Issues.
 ### MoSCOw
 It's a method that prioritzation technique used in management, The acronym MoSCoW represents four categories of initiatives: must-have, should-have, could-have, and won't-have, or will not have right now. I use Must-have and should-have for planning the website. The most important is using should which I should use.
 
+### Ecommerce Business Model
+
+### Search Engine Optimization (SEO) & Social Media Marketing
+### Keywords
+### Sitemap
+### Robtos
 ## Social Media
 ### Facebook
 Create a MockUp Facebook
 Having a social media presence is essential for e-commerce businesses because it significantly expands their reach and enhances customer engagement beyond what a standalone website can achieve. Social media platforms like Facebook, Instagram, and TikTok boast billions of active users. Unlike websites, which rely on users actively seeking them out, social media allows businesses to meet potential customers where they already spend their time, increasing visibility and brand recognition.
-
 I've set up a Facebook business account to establish a presence for my e-commerce brand. This account will serve as a platform to connect with potential customers, showcase products, share updates, and build engagement.
-
-
-
+|Payment | Payment completed|  
+| --- | --- | 
+| ![screenshot](documentation/socialmedia/Facebook Page Mockup 2022.png) | ![screenshot](documentation/browsers/chrome-payment-thank.png) |
 ### Newsletter
+
 
 ## Testing
 > [!NOTE]  
