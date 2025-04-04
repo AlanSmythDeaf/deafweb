@@ -31,7 +31,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | Directory | File | Screenshot | Notes |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | about | app.py | ![screenshot](documentation/validation/python/about-app.png) | All clear, no errors found |
 | about | urls.py | ![screenshot](documentation/validation/python/about-urls.png) | All clear, no errors found |
 | about | view.py | ![screenshot](documentation/validation/python/about-app.png) | All clear, no errors found |
