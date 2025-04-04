@@ -109,12 +109,12 @@ Defensive programming was manually tested with the below user acceptance testing
 | Page | Expectation | Test | Result | Screenshot |
 | --- | --- | --- | --- | --- |
 | Footer | Subcribed | correct email | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
-| Footer | Failed | input name instead of email | passed | ![screenshot]() |
-| Footer | Already Subcribed | Repeat the pcorrect email | passed | ![screenshot]() |
+| Footer | Failed | input name instead of email | passed | ![screenshot](documentation/other/fake-mail.png) |
+| Footer | Already Subcribed | Repeat the correct email | passed | ![screenshot](documentation/other/already-subscribe.png) |
 |  |  |  |  |  |  |
 | Contact | To be able to send an email | correct email | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
-| Contact | Aadmin to get the email | check admin | passed | ![screenshot]() |
-| Contact | clicking on submit button without message | email not send | passed | ![screenshot]() |
+| Contact | Admin to get the email | check admin | passed | ![screenshot](documentation/other/contact-admin.png) |
+| Contact | clicking on submit button without message | email not send | passed | ![screenshot](documentation/other/contact-empty.png) |
 
 
 Button testing
@@ -146,8 +146,8 @@ Button testing
 
 | User Story | Screenshot |
 | --- | --- |
-| As a site administrator, I should be able to log in, so that I can access the admin page | ![screenshot]() |
-| As a site administrator, I should be able to manage the contact us, so that I can received message. | ![screenshot]() |
+| As a site administrator, I should be able to log in, so that I can access the admin page | ![screenshot](documentation/other/django-admin.png) |
+| As a site administrator, I should be able to manage the contact us, so that I can received message. | ![screenshot](documentation/other/contact-admin.png) |
 
 ## Bugs
 Had issue along the way
