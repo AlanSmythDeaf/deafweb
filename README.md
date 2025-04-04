@@ -9,13 +9,26 @@ The goal was to have a website on basis that I hopefully will become a web dev.
 source: [amiresponsive](https://ui.dev/amiresponsive)
 
 ## UX
-When decide on the Project 5 - I was thinking about how to do ecommerce that is not the same as  boutiuq ado, want to see if I can do it slightly different so went webdesign business. 
-### Idea
- - Chose the colour that is web accessbititly 
- - Using the User Story, Wireframe, Kaban that helps build the website.
+When decide on the Project 5 - I was thinking about how to do ecommerce that is not the same as boutique ado, want to see if I can do it slightly different so went webdesign business. 
 
 ### Structure
-Scope Plane - 
+The idea is Web Design by Deaf Professionals
+Making it accessible ecommerce solutions that demonstrate disability is no barrier to technical excellence, crafting visually immersive websites that empower businesses while bridging communication divides.
+
+Website Design Goals
+- Let people/business know that disability is not a barrier, when are coding we don't need use ears.
+- Design website
+- Key Message
+
+Website Essentials
+1. Portfolio Showcase
+(Demonstrate Technical Mastery & Accessibility)
+2. Stripe Payment Integration
+(Seamless Transaction Experience)
+3. Simplified Contact Flow
+(Barrier-Free Communication)
+4. Newsletter Ecosystem
+(Dual-Channel Engagement)
 
 ### Colour Scheme 
 I have chose the color blue as the main colour
@@ -149,8 +162,6 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 - People/User to upload video on the contact us page so people can sign in their own sign language.
 - In work page each section to have full width of mockup on each device i.e. laptop, tablet of companies we work with.
   
-
-
 ## Tools & Technologies Used
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
@@ -185,9 +196,9 @@ The steps taken were as follows:
 - then type Y to proceed
 - then: pip3 install django-extensions pygraphviz
 - in my settings.py file, I added the following to my INSTALLED_APPS
-  
-- 'django_extensions'
-  
+ ``` 
+   'django_extensions'
+ ```
 - back in the terminal: python3 manage.py graph_models -a -o erd.png
 - dragged the new erd.png file into my documentation/ folder
 - removed 'django_extensions', from my INSTALLED_APPS
@@ -197,31 +208,56 @@ The steps taken were as follows:
 how to explain ????????
 
 ### GitHub Projects
-[GitHub Projects](https://github.com/AlanSmythDeaf/deafchat/projects) served as an Agile tool for this project.
+[GitHub Projects](https://github.com/AlanSmythDeaf/deafweb/projects?query=is%3Aopen) served as an Agile tool for this project.
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 screenshot Projects Board.
 
 ### GitHub Issues
-[GitHub Issues](https://github.com/AlanSmythDeaf/deafchat/issues) served as an another Agile tool.
+[GitHub Issues](https://github.com/AlanSmythDeaf/deafweb/issues) served as an another Agile tool.
 There, I used my own **User Story Template** to manage user stories.
 It also helped with milestone iterations on a weekly basis.
-screenshot of Open and Closed Issues.
 
 ### MoSCOw
 It's a method that prioritzation technique used in management, The acronym MoSCoW represents four categories of initiatives: must-have, should-have, could-have, and won't-have, or will not have right now. I use Must-have and should-have for planning the website. The most important is using should which I should use.
 
 ### Ecommerce Business Model
+Deaf Design operates as a B2B web design agency led by Deaf professionals, specializing in visually striking, accessibility-first websites that foster seamless interaction between Deaf and hearing communities. This model emphasizes strategic efficiency through structured consultation fees, prioritizing project planning, collaborative reviews, and iterative design sprints to eliminate inefficiencies and ensure precision in execution.
+
+Social media integration serves as a cornerstone for growth, leveraging platforms like LinkedIn, Instagram, and YouTube to amplify reach, showcase portfolio work, and engage corporate clients. Content strategies—such as behind-the-scenes design processes, accessibility case studies, and client testimonials—will boost site traffic while positioning the agency as an industry thought leader.
+
+The newsletter will function as a dual-purpose tool:
+- Client updates: Highlight recent projects, accessibility breakthroughs, and partnership opportunities
+- Community engagement: Share industry news, Deaf community initiatives, and resources for inclusive design
+- This approach nurtures long-term client relationships while building a support network for accessibility advocates.
 
 ### Search Engine Optimization (SEO) & Social Media Marketing
 ### Keywords
+I've identified some appropriate keywords to align with my site, which should help users find my page easily from a search engine when searching online. This included a series of the following keyword types
+
+Short-tail (head terms) keywords
+Long-tail keywords
+I also played around with [Word Tracker](https://www.wordtracker.com/) a bit to check the frequency of some of my site's primary keywords (only until the free trial expired).
+
 ### Sitemap
 I've used XML-Sitemaps to generate a sitemap.xml file. This was generated using my deployed site URL: https://signcoding-d529cc1ebf99.herokuapp.com
-
-After crawling the entire site, it created a sitemap.xml, which I've downloaded and included in the repository.
+After crawling the entire site, it created a sitemap.xml(sitemap.xml), which I've downloaded and included in the repository.
 
 ### Robots
+```
 
+User-agent: *
+Disallow:  
+Sitemap: https://ddesign-pp5-01f27d10398c.herokuapp.com/sitemap.xml
+
+```
+Further links for future implementation:
+
+- Google search console
+- Creating and submitting a sitemap
+- Managing your sitemaps and using sitemaps reports
+- Testing the robots.txt file
+  
 ## Social Media
 ### Facebook
 Create a MockUp Facebook
