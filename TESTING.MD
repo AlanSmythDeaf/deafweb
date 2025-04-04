@@ -107,7 +107,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Defensive programming was manually tested with the below user acceptance testing:
 | Page | Expectation | Test | Result | Screenshot |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | Footer | Subcribed | correct email | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
 | Footer | Failed | input name instead of email | passed | ![screenshot]() |
 | Footer | Already Subcribed | Repeat the pcorrect email | passed | ![screenshot]() |
