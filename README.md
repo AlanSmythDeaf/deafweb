@@ -189,6 +189,64 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 Entity Relationship Diagrams (ERD) help to visualise database architecture before creating models.
 I have used pygraphviz and django-extensions to auto-generate an ERD.
 
+Contact
+```
+class ContactForm(models.Model):
+    name = models.CharField(max_length=200, blank=False)
+    phonenumber = models.CharField(max_length=15, blank=True)
+    email = models.EmailField(blank=False)
+    message = models.TextField(blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+```
+
+Checkout
+```
+class Order(models.Model):
+
+    STATUS_CHOICES = [
+      ('pending', 'Pending'),
+      ('completed', 'Completed'),
+    ]
+
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = models.CharField(max_length=40, null=False, blank=False)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    postal_code = models.CharField(max_length=20, null=False, blank=False)
+    date = models.DateTimeField(auto_now_add=True)
+    item_name = models.CharField(max_length=100, null=False, blank=False)
+    item_price = models.DecimalField(max_digits=10, decimal_places=2,
+                                     null=False)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
+```
+Newsletter
+```
+class NewsletterSubscriber(models.Model):
+    email = models.EmailField(unique=True)
+    date_subscribed = models.DateTimeField(auto_now_add=True)
+```
+Work
+```
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+```
+```
+class Website(models.Model):
+    CATEGORY_CHOICES = [
+        ('charity', 'Charity'),
+        ('retail', 'Retail'),
+        ('service', 'Service'),
+    ]
+
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    url = models.URLField()
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
+```
 The steps taken were as follows:
 
 - In the terminal: sudo apt update
@@ -204,8 +262,10 @@ The steps taken were as follows:
 - removed 'django_extensions', from my INSTALLED_APPS
 - finally, in the terminal: pip3 uninstall django-extensions pygraphviz -y
 
+ ![screenshot](documentation/other/erd.png)  
+
 ## Agile Development Process
-how to explain ????????
+Used Agile plan to manage the project, it wasn't straightforward as expected.
 
 ### GitHub Projects
 [GitHub Projects](https://github.com/AlanSmythDeaf/deafweb/projects?query=is%3Aopen) served as an Agile tool for this project.
@@ -253,10 +313,10 @@ Sitemap: https://ddesign-pp5-01f27d10398c.herokuapp.com/sitemap.xml
 ```
 Further links for future implementation:
 
-- Google search console
-- Creating and submitting a sitemap
-- Managing your sitemaps and using sitemaps reports
-- Testing the robots.txt file
+- [Google search console](https://search.google.com/search-console/welcome)
+- [Creating and submitting a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+- [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
+- [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
   
 ## Social Media
 ### Facebook
