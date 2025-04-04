@@ -113,8 +113,8 @@ Defensive programming was manually tested with the below user acceptance testing
 | Footer | Already Subcribed | Repeat the pcorrect email | passed | ![screenshot]() |
 |  |  |  |  |  |  |
 | Contact | To be able to send an email | correct email | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
-| Contact | Aadmin to get the email | check admin | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
-| Contact | clicking on submit button without message | email not send | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
+| Contact | Aadmin to get the email | check admin | passed | ![screenshot]() |
+| Contact | clicking on submit button without message | email not send | passed | ![screenshot]() |
 
 
 Button testing
@@ -141,25 +141,26 @@ Button testing
 ## User Story Testing
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to be able to sign up, so that I can comment on a post. | ![screenshot]() |
-| As a new site user, I would like to be able to be able to make payment. | ![screenshot]() |
+| As a new site user, I would like to be able to sign up to newsletter. | ![screenshot](documentation/browsers/chrome-subscribe.png) |
+| As a new site user, I would like to be able to be able to make payment. | ![screenshot](documentation/browsers/chrome-payment.png) |
 
 | User Story | Screenshot |
 | --- | --- |
-| As a site administrator, I should be able to log in, so that I can access the admin page | ![screenshot](documentation/others/admin_page.png) |
-| As a site administrator, I should be able to manage the contact us, so that I can received message. | ![screenshot](documentation/others/admin_contact.png) |
+| As a site administrator, I should be able to log in, so that I can access the admin page | ![screenshot]() |
+| As a site administrator, I should be able to manage the contact us, so that I can received message. | ![screenshot]() |
 
 ## Bugs
-
+Had issue along the way
+| User Story | Screenshot |
+| --- | --- |
+|  |  |
 ### GitHub **Issues**
 
 **Open Issues**
-
 [![GitHub issues]
 [![GitHub closed issues]
 
 Any remaining open issues can be tracked [here]().
-
 ## Unfixed Bugs
 
 > [!NOTE]  
