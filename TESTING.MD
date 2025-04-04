@@ -46,7 +46,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | collaborate | view.py | ![screenshot](documentation/validation/python/collaborate-view.png) | All clear, no errors found |
 | contact | admin.py | ![screenshot](documentation/validation/python/contact-admin.png) | All clear, no errors found |
 | contact | model.py | ![screenshot](documentation/validation/python/contact-model.png) | All clear, no errors found |
-| contact | view.py | ![screenshot]documentation/validation/python/contact-view.png) | All clear, no errors found |
+| contact | view.py | ![screenshot](documentation/validation/python/contact-view.png) | All clear, no errors found |
 | deafdesign | admin.py | ![screenshot](documentation/validation/python/deafdesign-admin.png) | All clear, no errors found |
 | deafdesign | forms.py | ![screenshot](documentation/validation/python/deafdesign-forms.png) | All clear, no errors found |
 | deafdesign | model.py | ![screenshot](documentation/validation/python/deafdesign-model.png) | All clear, no errors found |
@@ -151,9 +151,10 @@ Button testing
 
 ## Bugs
 Had issue along the way
-| User Story | Screenshot |
+| Issues | Issues  |
 | --- | --- |
-|  |  |
+| ![screenshot](documentation/other/Heroku.png) | ![screenshot](documentation/other/heroku-Issue.png) |
+| ![screenshot](documentation/other/css-error.png) | ![screenshot](documentation/other/checkout-error.png) |
 ### GitHub **Issues**
 
 **Open Issues**
