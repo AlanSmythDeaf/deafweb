@@ -32,7 +32,35 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| about | admin.py | ![screenshot](documentation/validation/python/about-app.png) | All clear, no errors found |
+| about | app.py | ![screenshot](documentation/validation/python/about-app.png) | All clear, no errors found |
+| about | urls.py | ![screenshot](documentation/validation/python/about-urls.png) | All clear, no errors found |
+| about | view.py | ![screenshot](documentation/validation/python/about-app.png) | All clear, no errors found |
+| checkout | admin.py | ![screenshot](documentation/validation/python/checkout-admin.png) | All clear, no errors found |
+| checkout | app.py | ![screenshot](documentation/validation/python/checkout-app.png) | All clear, no errors found |
+| checkout | forms.py | ![screenshot](documentation/validation/python/checkout-forms.png) | All clear, no errors found |
+| checkout | models.py | ![screenshot](documentation/validation/python/checkout-models.png) | All clear, no errors found |
+| checkout | urls.py | ![screenshot](documentation/validation/python/checkout-urls.png) | All clear, no errors found |
+| checkout | view.py | ![screenshot](documentation/validation/python/checkout-views.png) | All clear, no errors found |
+| collaborate | app.py | ![screenshot](documentation/validation/python/collaborate-app.png) | All clear, no errors found |
+| collaborate | urls.py | ![screenshot](documentation/validation/python/collaborate-urls.png) | All clear, no errors found |
+| collaborate | view.py | ![screenshot](documentation/validation/python/collaborate-view.png) | All clear, no errors found |
+| contact | admin.py | ![screenshot](documentation/validation/python/contact-admin.png) | All clear, no errors found |
+| contact | model.py | ![screenshot](documentation/validation/python/contact-model.png) | All clear, no errors found |
+| contact | view.py | ![screenshot]documentation/validation/python/contact-view.png) | All clear, no errors found |
+| deafdesign | admin.py | ![screenshot](documentation/validation/python/deafdesign-admin.png) | All clear, no errors found |
+| deafdesign | forms.py | ![screenshot](documentation/validation/python/deafdesign-forms.png) | All clear, no errors found |
+| deafdesign | model.py | ![screenshot](documentation/validation/python/deafdesign-model.png) | All clear, no errors found |
+| deafdesign | setting.py | ![screenshot](documentation/validation/python/deafdesign-setting.png) | All clear, no errors found |
+| deafdesign | url.py | ![screenshot](documentation/validation/python/deafdesign-url.png) | All clear, no errors found |
+| deafdesign | view.py | ![screenshot](documentation/validation/python/deafdesign-view.png) | All clear, no errors found |
+| home | app.py | ![screenshot](documentation/validation/python/home-app.png) | All clear, no errors found |
+| home | url.py | ![screenshot](documentation/validation/python/home-url.png) | All clear, no errors found |
+| home | view.py | ![screenshot](documentation/validation/python/home-view.png) | All clear, no errors found |
+| work | admin.py | ![screenshot](documentation/validation/python/work-admin.png) | All clear, no errors found |
+| work | app.py | ![screenshot](documentation/validation/python/work-app.png) | All clear, no errors found |
+| work | model.py | ![screenshot](documentation/validation/python/work-model.png) | All clear, no errors found |
+| work | url.py | ![screenshot](documentation/validation/python/work-url.png) | All clear, no errors found |
+| work | view.py | ![screenshot](documentation/validation/python/work-view.png) | All clear, no errors found |
 
 ## Browser Compatibility
 
@@ -78,9 +106,16 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 ## Defensive Programming
 
 Defensive programming was manually tested with the below user acceptance testing:
-| Page | Expectation | Test | Result | Fix | Screenshot |
+| Page | Expectation | Test | Result | Screenshot |
 | --- | --- | --- | --- | --- | --- |
+| Footer | Subcribed | correct email | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
+| Footer | Failed | input name instead of email | passed | ![screenshot]() |
+| Footer | Already Subcribed | Repeat the pcorrect email | passed | ![screenshot]() |
 |  |  |  |  |  |  |
+| Contact | To be able to send an email | correct email | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
+| Contact | Aadmin to get the email | check admin | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
+| Contact | clicking on submit button without message | email not send | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
+
 
 Button testing
 | Page | Button Name | Action | Expectation | Result |
