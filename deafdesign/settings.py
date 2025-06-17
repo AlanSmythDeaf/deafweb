@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'crispy_forms',
     'crispy_bootstrap5',
     'django_summernote',
@@ -101,6 +103,16 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
 WSGI_APPLICATION = 'deafdesign.wsgi.application'
 
 SUMMERNOTE_CONFIG = {
@@ -121,15 +133,16 @@ if 'DATABASE_URL' in os.environ:
 else:
     DATABASES = {
         'default': dj_database_url.config(
-            default=os.environ.get(''),
+            default='sqlite:///db.sqlite3',
             conn_max_age=600,
             conn_health_checks=True,
         )
     }
 
 
-# Add SSL mode to enforce secure connections
-DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
+# Only add sslmode if using Postgres
+if DATABASES['default']['ENGINE'] == 'django.db.backends.postgresql':
+    DATABASES['default']['OPTIONS'] = {'sslmode': 'require'}
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
