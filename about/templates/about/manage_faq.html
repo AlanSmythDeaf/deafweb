@@ -7,7 +7,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-success">Add FAQ</button>
+        <button type="submit" class="btn btn-custom">Add FAQ</button>
     </form>
     <hr>
     <h4>Existing FAQs</h4>
@@ -16,16 +16,18 @@
         <li>
             <strong>{{ faq.question }}</strong>
             <br>{{ faq.answer }}
+            <br>
             <a href="{% url 'edit_faq' faq.id %}" class="btn btn-warning btn-sm">Edit</a>
             <form action="{% url 'delete_faq' faq.id %}" method="post" style="display:inline;">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
             </form>
+            <hr>
         </li>
         {% empty %}
         <li>No FAQs yet.</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'about' %}" class="btn btn-secondary mt-2">Back to About Page</a>
+    <a href="{% url 'about' %}" class="btn btn-custom">Back to About Page</a>
 </div>
 {% endblock %}
