@@ -5,6 +5,8 @@ from django.conf import settings
 from django.contrib import messages
 from .forms import OrderForm
 from .models import Order
+from django.core.mail import send_mail
+
 
 print(settings.STRIPE_SECRET_KEY)
 logger = logging.getLogger(__name__)

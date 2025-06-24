@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-alansmythdeaf-deafweb-x0o5rl5dx2u.ws-eu118.gitpod.io',
                  '8000-alansmythdeaf-deafweb-sh24kwu6hee.ws-eu120.gitpod.io',
@@ -209,7 +209,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 # stripe.api_key = STRIPE_SECRET_KEY
 
 # Email configuration
-if os.environ.get('DEVELOPMENT') == 'True':
+if 'DEVELOPMENT' in os.environ:
     # Development: log emails to console
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'deafdesign@example.com'
