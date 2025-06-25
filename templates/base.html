@@ -130,10 +130,9 @@
                 {% if user.is_superuser %}
                   <li><a href="" class="text-dark">Management</a></li>
                 {% endif %}
-                <li><a href="" class="text-dark">Account</a></li>
                 <li><a href="{% url 'account_logout' %}" class="text-dark">Logout</a></li>
               {% else %}
-                <li><a href="{% url 'account_signup' %}" class="text-dark">Register</a></li>
+                <li><a href="/accounts/signup/" class="text-dark">Register</a></li>
                 <li><a href="{% url 'account_login' %}" class="text-dark">Login</a></li>
               {% endif %}
             </ul>

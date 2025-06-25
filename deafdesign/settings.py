@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-alansmythdeaf-deafweb-x0o5rl5dx2u.ws-eu118.gitpod.io',
                  '8000-alansmythdeaf-deafweb-sh24kwu6hee.ws-eu120.gitpod.io',
