@@ -12,6 +12,8 @@ if os.path.isfile('env.py'):
 from dotenv import load_dotenv
 load_dotenv()
 
+print("DATABASE_URL:", os.environ.get('DATABASE_URL'))
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = ['8000-alansmythdeaf-deafweb-x0o5rl5dx2u.ws-eu118.gitpod.io',
                  '8000-alansmythdeaf-deafweb-sh24kwu6hee.ws-eu120.gitpod.io',
