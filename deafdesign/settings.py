@@ -210,5 +210,3 @@ DEFAULT_FROM_EMAIL = 'deafdesign@example.com'
 
 # Initialize Stripe with your secret key
 # stripe.api_key = STRIPE_SECRET_KEY
-
-    
