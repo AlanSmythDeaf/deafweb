@@ -70,6 +70,7 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 
 - As a site administrator, I should be able to log into the admin page.
 - As a site administrator, I should be able to update the works section.
+- As a site administrator, I should be able to use CRUD on the FAQ section in about page.
 - As a site administrator, I should be able to manage the contact us, so that I can received message.
 
 ## Wireframes
@@ -198,7 +199,12 @@ class ContactForm(models.Model):
     message = models.TextField(blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
 ```
-
+FAQ
+```
+class FAQ(models.Model):
+    question = models.CharField(max_length=255)
+    answer = models.TextField()
+```
 Checkout
 ```
 class Order(models.Model):
@@ -334,7 +340,7 @@ To recieved the newsletter, the user will need to subscribe to the newsletter by
 
 ## Testing
 > [!NOTE]  
-> For all testing, please refer to the [TESTING.md](TESTING.MD) file. (not yet)
+> For all testing, please refer to the [TESTING.md](TESTING.MD) file.
 
 ## Deployment
 
