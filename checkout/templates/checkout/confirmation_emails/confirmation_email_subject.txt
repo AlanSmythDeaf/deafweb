@@ -1,1 +1,1 @@
-DesfDesign Confirmation {{ order.order_id }}
+DeafDesign Payment Confirmation {{ order.order_id }}

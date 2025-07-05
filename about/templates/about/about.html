@@ -93,9 +93,10 @@ Deaf Design:  Visually stunning and accessible websites by Deaf professionals.
                         {{ faq.answer|linebreaks }}
                         {% if is_admin %}
                         <div>
+                            <a href="{% url 'edit_faq' faq.id %}" class="btn btn-warning btn-sm">Edit</a>
                             <form action="{% url 'delete_faq' faq.id %}" method="post" style="display:inline;">
                                 {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>
                         </div>
                         {% endif %} 
