@@ -108,10 +108,10 @@ Deaf Design:  Visually stunning and accessible websites by Deaf professionals.
             {% endfor %}
         </div>
         {% if is_admin %}
-        <a href="{% url 'manage_faq' %}" class="btn btn-custom">Add/Edit FAQ</a>
+        <a href="{% url 'manage_faq' %}" class="btn btn-dark">Add/Edit FAQ</a>
         {% endif %}
         <div>
-            <p>If your question isn't answered here, please <a href="{% url 'contact' %}">contact us</a> for more information.</p>
+            <p style="text-align: center;">If your question isn't answered here, please <a href="{% url 'contact' %}">contact us</a> for more information.</p>
         </div>
     </section>
 </div>
