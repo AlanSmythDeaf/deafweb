@@ -20,7 +20,16 @@
             <a href="{% url 'edit_faq' faq.id %}" class="btn btn-warning btn-sm">Edit</a>
             <form action="{% url 'delete_faq' faq.id %}" method="post" style="display:inline;">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                <button type="button"
+                        class="btn btn-danger btn-sm delete-faq-btn"
+                        data-form-id="delete-faq-form-{{ faq.id }}">
+                Delete
+                </button>
+                <form id="delete-faq-form-{{ faq.id }}"
+                    action="{% url 'delete_faq' faq.id %}"
+                    method="post"
+                    style="display:none;">
+                </form>
             </form>
             <hr>
         </li>
@@ -28,6 +37,28 @@
         <li>No FAQs yet.</li>
         {% endfor %}
     </ul>
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="deleteConfirmModalLabel">Confirm Delete</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to delete your comment? This action cannot be undone.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="confirmDeleteBtn" type="button" class="btn btn-danger">Delete</button>
+        </div>
+        </div>
+    </div>
+    </div>
     <a href="{% url 'about' %}" class="btn btn-custom">Back to About Page</a>
 </div>
 {% endblock %}
+{% block postloadjs %}
+<script src="{% static 'js/faq_delete_confirm.js' %}"></script>
+{% endblock %}
+
