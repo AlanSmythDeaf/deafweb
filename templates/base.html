@@ -70,6 +70,13 @@
           </div>
         </div>
     </nav>
+    <nav>
+      <div class="nav-container">
+          {% if user.is_authenticated %}
+            <p class="text-dark">Current User: <strong>{{ user.username }}</strong></p>
+          {% endif %}
+      </div>
+    </nav>
     <!--Body -->
     {% if message %}
     <div class="message-container"></div>
@@ -123,18 +130,18 @@
           
           <!-- Authentication (Register, Login, Logout) -->
           <div class="col-md-3 mb-md-0 mb-3 mt-3">
-            <h5>Management</h5>
-            <ul class="list-unstyled">  
-              
+            <h5>Account</h5>
+            <ul class="list-unstyled">                                                   
               {% if user.is_authenticated %}
+                <li class="text-dark">Current User: <strong>{{ user.username }}</strong></li>
                 {% if user.is_superuser %}
-                  <li><a href="" class="text-dark">Management</a></li>
+                  <li><a href="{% url 'manage_faq' %}" class="text-dark">Manage FAQ</a></li>
                 {% endif %}
                 <li><a href="{% url 'account_logout' %}" class="text-dark">Logout</a></li>
-              {% else %}
-                <li><a href="/accounts/signup/" class="text-dark">Register</a></li>
-                <li><a href="{% url 'account_login' %}" class="text-dark">Login</a></li>
-              {% endif %}
+                {% else %}
+                  <li><a href="/accounts/signup/" class="text-dark">Register</a></li>
+                  <li><a href="{% url 'account_login' %}" class="text-dark">Login</a></li>
+                {% endif %}
             </ul>
           </div>
 

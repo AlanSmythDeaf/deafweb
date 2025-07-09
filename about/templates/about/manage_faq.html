@@ -18,25 +18,20 @@
             <br>{{ faq.answer }}
             <br>
             <a href="{% url 'edit_faq' faq.id %}" class="btn btn-warning btn-sm">Edit</a>
-            <form action="{% url 'delete_faq' faq.id %}" method="post" style="display:inline;">
-                {% csrf_token %}
-                <button type="button"
-                        class="btn btn-danger btn-sm delete-faq-btn"
-                        data-form-id="delete-faq-form-{{ faq.id }}">
-                Delete
-                </button>
+            <button type="button" class="btn btn-danger btn-sm delete-faq-btn" data-form-id="delete-faq-form-{{ faq.id }}">Delete</button>
                 <form id="delete-faq-form-{{ faq.id }}"
                     action="{% url 'delete_faq' faq.id %}"
                     method="post"
                     style="display:none;">
+                    {% csrf_token %}
+                    <button type="submit"></button>
                 </form>
-            </form>
-            <hr>
         </li>
         {% empty %}
         <li>No FAQs yet.</li>
         {% endfor %}
     </ul>
+    <hr>
     <!-- Delete Confirmation Modal -->
     <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
