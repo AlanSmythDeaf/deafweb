@@ -94,14 +94,13 @@ Deaf Design:  Visually stunning and accessible websites by Deaf professionals.
                         {% if is_admin %}
                         <div>
                             <a href="{% url 'edit_faq' faq.id %}" class="btn btn-warning btn-sm">Edit</a>
-                            <form action="{% url 'delete_faq' faq.id %}" method="post" style="display:inline;">
+                            <button type="button" class="btn btn-danger btn-sm delete-faq-btn" data-form-id="delete-faq-form-{{ faq.id }}"> Delete </button>
+                            <form id="delete-faq-form-{{ faq.id }}"
+                                action="{% url 'delete_faq' faq.id %}"
+                                method="post"
+                                style="display:none;">
                                 {% csrf_token %}
-                                <button type="button" class="btn btn-danger btn-sm delete-faq-btn" data-form-id="delete-faq-form-{{ faq.id }}"> Delete </button>
-                                <form id="delete-faq-form-{{ faq.id }}" 
-                                    action="{% url 'delete_faq' faq.id %}" 
-                                    method="post" 
-                                    style="display:none;">
-                                </form>
+                                <button type="submit"></button>
                             </form>
                         </div>
                         {% endif %} 
