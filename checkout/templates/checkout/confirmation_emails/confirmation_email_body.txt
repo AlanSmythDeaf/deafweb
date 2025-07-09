@@ -2,7 +2,7 @@ Hi {{ order.full_name }},
 
 Thank you for your purchase for Initial Consulation with Deaf Design
 
-Order ID: {{ order_id }}
+Order ID: {{ order.id }}
 Total: €50
 
 We’ve received your payment and will get in touch with you soon for the meet up
