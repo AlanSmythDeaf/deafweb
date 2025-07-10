@@ -93,7 +93,10 @@ def checkout_success(request, order_id):
     try:
         # Fetch the order using the provided order_id
         order = Order.objects.get(id=order_id)
-        messages.success(request, f"Payment completed successfully for {order.full_name}.")
+        messages.success(
+            request,
+            f"Payment completed successfully for {order.full_name}."
+        )
 
         # Prepare email content using your plain text template
         subject = render_to_string(

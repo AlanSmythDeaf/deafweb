@@ -3,6 +3,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .models import FAQ
 from .forms import FAQForm
 
+
 def about(request):
     faqs = FAQ.objects.all()
     is_admin = request.user.is_authenticated and request.user.is_staff
@@ -11,6 +12,7 @@ def about(request):
         'is_admin': is_admin,
     }
     return render(request, 'about/about.html', context)
+
 
 @staff_member_required
 def manage_faq(request):
@@ -22,12 +24,18 @@ def manage_faq(request):
             return redirect('about')
     else:
         form = FAQForm()
-    return render(request, 'about/manage_faq.html', {'form': form, 'faqs': faqs})
+        return render(
+                request,
+                'about/manage_faq.html',
+                {'form': form, 'faqs': faqs}
+        )
+
 
 @staff_member_required
 def delete_faq(request, faq_id):
     FAQ.objects.filter(id=faq_id).delete()
     return redirect('manage_faq')
+
 
 @staff_member_required
 def edit_faq(request, faq_id):
