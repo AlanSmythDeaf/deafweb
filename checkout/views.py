@@ -13,6 +13,7 @@ from django.core.mail import send_mail
 print(settings.STRIPE_SECRET_KEY)
 logger = logging.getLogger(__name__)
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -84,6 +85,7 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_id):
     """
     Handle successful checkouts and send confirmation email
@@ -97,21 +99,21 @@ def checkout_success(request, order_id):
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order}
-        ).strip()  
+        ).strip()
 
         message = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order}
         )
-        
+
         recipient = order.email
 
         # Send confirmation email as plain text
         send_mail(
             subject,
             message,
-            settings.DEFAULT_FROM_EMAIL,  
-            [recipient],                  
+            settings.DEFAULT_FROM_EMAIL,
+            [recipient],
             fail_silently=False,
         )
         logger.info(f"Order confirmation email sent to {recipient}")

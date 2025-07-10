@@ -162,6 +162,7 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 ### Future Features
 - People/User to upload video on the contact us page so people can sign in their own sign language.
 - In work page each section to have full width of mockup on each device i.e. laptop, tablet of companies we work with.
+- Will have a blog page so that users can read the blog and make comments
   
 ## Tools & Technologies Used
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
@@ -268,7 +269,7 @@ The steps taken were as follows:
 - removed 'django_extensions', from my INSTALLED_APPS
 - finally, in the terminal: pip3 uninstall django-extensions pygraphviz -y
 
- ![screenshot](documentation/other/erd.png)  
+ ![screenshot](documentation/other/update-erd.png)
 
 ## Agile Development Process
 Used Agile plan to manage the project, it wasn't straightforward as expected.
