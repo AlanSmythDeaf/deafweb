@@ -34,3 +34,4 @@ urlpatterns = [
 ]
 
 handler404 = "deafdesign.views.handler404"
+handler500 = "deafdesign.views.handler500"

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+      <h2 class="text-center">Oops! Something went wrong.</h2>
+    </div>
+        <p>We're experiencing technical difficulties. Please try again later.</p>
+        <a href="{% url 'home' %}">Go back to homepage</a>
+    </div>
+</div>
+{% endblock content %}
