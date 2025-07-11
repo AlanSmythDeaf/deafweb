@@ -115,7 +115,9 @@ Defensive programming was manually tested with the below user acceptance testing
 | Contact | To be able to send an email | correct email | passed | ![screenshot](documentation/browsers/edge-subscribe-thank.png) |
 | Contact | Admin to get the email | check admin | passed | ![screenshot](documentation/other/contact-admin.png) |
 | Contact | clicking on submit button without message | email not send | passed | ![screenshot](documentation/other/contact-empty.png) |
-
+|  |  |  |  |  |  |
+| About Page - FAQ Section | When a user log in | FAQ not showing Add/Edit FAQ button | passed | ![screenshot](documentation/other/user-login.png) |
+| About Page - FAQ Section | When a staff log in | FAQ showing Add/Edit FAQ button | passed | ![screenshot](documentation/other/staff-login.png) |
 
 Button testing
 | Page | Button Name | Action | Expectation | Result |

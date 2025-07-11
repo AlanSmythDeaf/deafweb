@@ -158,6 +158,29 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
 | This is at the bottom of the page, where user can subscribe to newsletter | Policy Page is external page that goes to termsfeed | admin page for the Owner to update and check | a page that doesnt exist, can be a typo |
 | ![screenshot](documentation/features/subscribe_bottompage.png) | ![screenshot](documentation/features/policypage.png) | ![screenshot](documentation/features/djangopage.png) | ![screenshot](documentation/features/404page.png) |
 
+- **Register**
+
+    - Register page, this is where a person sign up to become a user or staff. A person must enter email, username and password which needs to be twice. No username can be the same.
+    
+|Register | Register Issue |  
+| --- | --- | 
+| ![screenshot](documentation/features/register.png) | ![screenshot](documentation/features/register-issue.png) |
+
+- **Log In**
+
+    - Log in page, this page is when a user log in, the user must type in username and password to be able to log in.e.
+    
+| Start | End |  
+| --- | --- | 
+| ![screenshot](documentation/features/login.png) | ![screenshot](documentation/features/login-password.png) |
+
+- **Staff Editing FAQ**
+
+    - Staff editing FAQ on the about page in the FAQ section, either click delete or edit, when click edit goes to edit section where update faq.
+    
+|FAQ About Section | Manage FAQ question and answer |  
+| --- | --- | 
+| ![screenshot](documentation/features/faq-edit.png) | ![screenshot](documentation/features/faq-manage.png) |
 
 ### Future Features
 - People/User to upload video on the contact us page so people can sign in their own sign language.
