@@ -34,7 +34,9 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | --- | --- | --- | --- |
 | about | app.py | ![screenshot](documentation/validation/python/about-app.png) | All clear, no errors found |
 | about | urls.py | ![screenshot](documentation/validation/python/about-urls.png) | All clear, no errors found |
-| about | view.py | ![screenshot](documentation/validation/python/about-app.png) | All clear, no errors found |
+| about | view.py | ![screenshot](documentation/validation/python/about-views.png) | All clear, no errors found |
+| about | models.py | ![screenshot](documentation/validation/python/about-modals.png) | All clear, no errors found |
+| about | forms.py | ![screenshot](documentation/validation/python/about-forms.png) | All clear, no errors found |
 | checkout | admin.py | ![screenshot](documentation/validation/python/checkout-admin.png) | All clear, no errors found |
 | checkout | app.py | ![screenshot](documentation/validation/python/checkout-app.png) | All clear, no errors found |
 | checkout | forms.py | ![screenshot](documentation/validation/python/checkout-forms.png) | All clear, no errors found |
@@ -145,11 +147,14 @@ Button testing
 | --- | --- |
 | As a new site user, I would like to be able to sign up to newsletter. | ![screenshot](documentation/browsers/chrome-subscribe.png) |
 | As a new site user, I would like to be able to be able to make payment. | ![screenshot](documentation/browsers/chrome-payment.png) |
+| As a new site user, I would like to be able to regsiter | ![screenshot](documentation/features/register.png) |
+| As a site user, I would like to be able to know that am logged in | ![screenshot](documentation/other/user-logged-in.png) |
 
 | User Story | Screenshot |
 | --- | --- |
 | As a site administrator, I should be able to log in, so that I can access the admin page | ![screenshot](documentation/other/django-admin.png) |
 | As a site administrator, I should be able to manage the contact us, so that I can received message. | ![screenshot](documentation/other/contact-admin.png) |
+| As a site administrator, I should be able to manage the permisson when user regsiter | ![screenshot](documentation/other/permisson.png) |
 
 ## Bugs
 Had issue along the way

@@ -102,7 +102,7 @@ I used [coolors.co](https://coolors.co/274c77-1a3a5f-e6e8eb-ffffff-f8f9fa) to ge
     - This is the first page when the website is loaded, present the user with options to chose from in the navbar.
     1) Collaborate - Working together
     2) Our Work - Website that Deaf Design have created
-    3) About - What the website is all about 
+    3) About - What the website is all about. In the FAQ section, the staff can edit the faq but when the user login they cannot.
     4) Contact - for user to get in touch with the admin
     5) Logo - back to the home page
     6) Section divided as scroll down with two different colour
